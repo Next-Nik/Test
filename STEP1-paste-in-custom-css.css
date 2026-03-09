@@ -1,3 +1,4 @@
+<style>
 /* =============================================
    NEXTUS / LIFE OS — Global Styles
    Paste this ONCE into:
@@ -28,7 +29,7 @@
   font-size: 18px;
   line-height: 1.7;
   color: var(--body);
-  text-align: left;
+  text-align: left !important;
 }
 
 /* Eyebrow */
@@ -41,7 +42,7 @@
   text-transform: uppercase;
   display: block;
   margin-bottom: 14px;
-  text-align: left;
+  text-align: left !important;
 }
 
 /* Headings */
@@ -54,7 +55,7 @@
   line-height: 1.15;
   letter-spacing: -0.01em;
   margin-bottom: 16px;
-  text-align: left;
+  text-align: left !important;
 }
 
 .nk-page h2 {
@@ -64,7 +65,7 @@
   color: var(--dark);
   line-height: 1.25;
   margin: 56px 0 14px;
-  text-align: left;
+  text-align: left !important;
 }
 
 .nk-page h3 {
@@ -74,7 +75,7 @@
   color: var(--gold);
   line-height: 1.3;
   margin: 36px 0 10px;
-  text-align: left;
+  text-align: left !important;
 }
 
 /* Hero heading wrapper — makes rule track heading width */
@@ -83,7 +84,7 @@
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left;
+  text-align: left !important;
 }
 
 /* Gold hero rule — tracks width of heading above it */
@@ -105,7 +106,7 @@
   line-height: 1.75;
   margin-bottom: 18px;
   max-width: 640px;
-  text-align: left;
+  text-align: left !important;
 }
 
 /* Horizontal rule */
@@ -131,7 +132,7 @@
   margin: 40px 0;
 
   max-width: 680px;
-  text-align: left;
+  text-align: left !important;
 }
 
 /* Blockquotes */
@@ -147,7 +148,7 @@
   line-height: 1.7;
 
   max-width: 640px;
-  text-align: left;
+  text-align: left !important;
 }
 
 .nk-page blockquote cite {
@@ -210,7 +211,7 @@
   line-height: 1.65;
 
   max-width: 640px;
-  text-align: left;
+  text-align: left !important;
 }
 
 .nk-list li::before {
@@ -291,3 +292,4 @@
   }
 
 }
+</style>
