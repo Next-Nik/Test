@@ -1,0 +1,129 @@
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --gold: #C8922A; --gold-line: rgba(200,146,42,0.22); --gold-faint: rgba(200,146,42,0.07);
+  --dark: #0F1523; --body: #4A4A4A; --meta: #7A7A72; --bg: #FAFAF7;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --serif-sc: 'Cormorant SC', Georgia, serif;
+}
+body { background: var(--bg); color: var(--body); font-family: var(--serif); font-size: 18px; line-height: 1.7; }
+.page { max-width: 820px; margin: 0 auto; padding: 72px 32px 100px; }
+.eyebrow { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; display: block; margin-bottom: 14px; }
+h1 { font-family: var(--serif); font-size: clamp(40px,5.5vw,64px); font-weight: 300; color: var(--gold); line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 16px; }
+h2 { font-family: var(--serif); font-size: clamp(22px,3vw,30px); font-weight: 600; color: var(--dark); line-height: 1.25; margin: 56px 0 14px; }
+h3 { font-family: var(--serif); font-size: clamp(18px,2.2vw,22px); font-weight: 500; color: var(--gold); line-height: 1.3; margin: 36px 0 10px; }
+p { font-size: clamp(16px,1.8vw,18px); color: var(--body); line-height: 1.75; margin-bottom: 18px; max-width: 640px; }
+.featured { font-family: var(--serif); font-size: clamp(19px,2.4vw,24px); font-weight: 300; font-style: italic; color: var(--dark); line-height: 1.6; border-left: 3px solid var(--gold); padding: 8px 0 8px 28px; margin: 40px 0; max-width: 680px; }
+blockquote { border-left: 3px solid var(--gold); padding: 6px 0 6px 24px; margin: 28px 0; font-style: italic; color: var(--body); font-size: clamp(16px,1.8vw,18px); line-height: 1.7; max-width: 640px; }
+blockquote cite { display: block; margin-top: 10px; font-style: normal; font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--meta); }
+.rule { border: none; border-top: 1px solid var(--gold-line); margin: 56px 0; }
+.sign-off { font-family: var(--serif); font-size: clamp(18px,2.2vw,22px); font-weight: 600; font-style: italic; color: var(--dark); margin: 44px 0 8px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 52px; padding-top: 48px; border-top: 1px solid var(--gold-line); }
+.cta-link { font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.16em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.35); padding-bottom: 3px; }
+.hero-rule { width: 56px; height: 1px; background: var(--gold); margin: 18px 0 36px; }
+.hero-sub { font-size: clamp(14px,1.5vw,16px); color: var(--meta); font-style: italic; margin-bottom: 8px; }
+ul.clean { list-style: none; padding: 0; margin: 0 0 20px; }
+ul.clean li { padding: 5px 0 5px 22px; position: relative; font-size: clamp(16px,1.8vw,18px); color: var(--body); max-width: 640px; line-height: 1.65; }
+ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
+.routing-list { list-style: none; padding: 0; margin: 20px 0 28px; }
+.routing-list li { padding: 9px 0 9px 28px; position: relative; font-style: italic; color: var(--body); font-size: clamp(16px,1.8vw,18px); border-bottom: 1px solid rgba(200,146,42,0.09); max-width: 620px; }
+.routing-list li::before { content: "→"; position: absolute; left: 0; color: var(--gold); }
+.tool-card { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 28px 28px 22px; margin-bottom: 4px; background: #fff; }
+.tool-card h3 { margin-top: 0; }
+.tool-card .threshold { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--meta); font-style: italic; margin: 10px 0 14px; }
+.tool-card .tool-cta { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.14em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.3); padding-bottom: 2px; }
+.domain-grid { display: flex; flex-wrap: wrap; gap: 0 20px; margin: 20px 0 28px; }
+.domain-grid span { font-family: var(--serif-sc); font-size: 13px; letter-spacing: 0.08em; color: var(--dark); padding: 3px 0; }
+.era-block { border-left: 2px solid var(--gold-line); padding: 12px 0 12px 24px; margin: 18px 0; }
+.era-block strong { display: block; font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 4px; }
+.era-block p { margin-bottom: 0; font-style: italic; font-size: 15px; }
+.episode-list { list-style: none; padding: 0; margin: 18px 0 24px; }
+.episode-list li { font-size: 16px; color: var(--body); padding: 7px 0 7px 22px; position: relative; border-bottom: 1px solid rgba(200,146,42,0.08); max-width: 580px; }
+.episode-list li::before { content: "→"; position: absolute; left: 0; color: var(--gold); }
+.proof-featured { background: var(--gold-faint); border-left: 3px solid var(--gold); padding: 28px 28px 22px; margin: 36px 0; }
+.proof-featured blockquote { border: none; padding: 0; margin: 0 0 12px; font-size: clamp(17px,2vw,20px); }
+.proof-featured cite { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--meta); font-style: normal; }
+.testimonials-grid { margin: 32px 0; }
+.testi { border-bottom: 1px solid var(--gold-line); padding: 24px 0; max-width: 640px; }
+.testi:last-child { border-bottom: none; }
+.testi blockquote { border: none; padding: 0; font-size: 16px; margin-bottom: 8px; }
+.testi cite { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.1em; color: var(--meta); font-style: normal; }
+.lenses { display: grid; gap: 4px; margin: 28px 0; }
+.lens { border-left: 3px solid var(--gold-line); padding: 14px 0 14px 20px; }
+.lens strong { display: block; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 4px; }
+.lens p { margin: 0; font-size: 16px; }
+.archetype-ex { background: var(--gold-faint); padding: 20px 24px; margin: 20px 0; font-style: italic; font-size: 16px; color: var(--dark); line-height: 1.65; max-width: 600px; }
+.two-ways { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 28px 0; }
+.way { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 22px 22px 18px; background: #fff; }
+.way h3 { margin-top: 0; font-size: 18px; }
+.way p { font-size: 15px; margin-bottom: 8px; }
+.pulse-rhythms { display: grid; gap: 4px; margin: 28px 0; }
+.rhythm { border-left: 3px solid var(--gold-line); padding: 16px 0 16px 22px; }
+.rhythm strong { display: block; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 6px; }
+.rhythm p { margin: 0; font-size: 16px; }
+.cta-button { display: inline-block; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.18em; color: var(--gold); text-decoration: none; border: 1px solid rgba(200,146,42,0.5); padding: 12px 28px; margin-top: 40px; }
+.cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+@media (max-width: 640px) { .two-ways { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .page { padding: 44px 20px 76px; } .cta-row { flex-direction: column; gap: 22px; } }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant+SC:wght@300;400;500&display=swap" rel="stylesheet">
+
+<div class="page">
+
+<span class="eyebrow">Life OS</span>
+<h1>How you're built<br>to contribute.</h1>
+<div class="hero-rule"></div>
+<p>You already have a pattern — the way you show up when something needs doing.</p>
+<p>You've been living it for years. The role you instinctively move into. The territory that holds your attention. The way things go better when you're in your natural position and worse when you're not.</p>
+<p>That pattern isn't random. It's how you naturally contribute when something meaningful is happening.</p>
+<p>Most people never have a name for it.</p>
+<p>Purpose Piece gives you one.</p>
+
+<hr class="rule">
+<h2>A different kind of assessment.</h2>
+<p>Many assessments describe who you are, what you're good at, or what career might suit you.</p>
+<p>Purpose Piece focuses on something different: how you're built to contribute — and where that contribution belongs.</p>
+<p>The difference is behavioral. Five questions, each anchored to something you actually did — not what you prefer, not what you value in the abstract, but what you concretely did when it mattered. The pattern emerges from what you've already lived. The archetype follows from the pattern.</p>
+
+<hr class="rule">
+<h2>Three lenses. One intersection.</h2>
+<div class="lenses">
+  <div class="lens"><strong>Archetype</strong><p>The specific role you naturally play in any living system. Not your personality. The functional shape you take when things need to get done.</p></div>
+  <div class="lens"><strong>Domain</strong><p>The territory where that role belongs in the larger work. Seven areas of collective life, each with its own question it's trying to answer.</p></div>
+  <div class="lens"><strong>Scale</strong><p>The bandwidth at which you naturally operate. Not ambition. Not status. The scope where you can act with full presence and genuine effectiveness.</p></div>
+</div>
+<p><strong>Archetype + Domain + Scale = Your Purpose Piece.</strong></p>
+<div class="archetype-ex">A Connector in Society at Local scale. A Guardian in Nature at Bioregional scale. An Architect in Vision at Civilizational scale. Same framework. Entirely different people. Entirely different work.</div>
+<p>The combination is what locates you. Not the archetype alone. Not the domain alone. The intersection of all three.</p>
+
+<hr class="rule">
+<h2>What the output feels like.</h2>
+<p>First you receive a behavioral mirror — a description of the pattern the system observed in how you actually move. No labels yet. Just: here is what was noticed.</p>
+<p>Then the archetype arrives. Not assigned. Recognized. As a consequence of everything that came before.</p>
+<blockquote>The test isn't "that's accurate." It's "oh."</blockquote>
+<p>That moment — the one where a pattern you've been living finally has a name — is the product. Everything else is in service of it.</p>
+
+<hr class="rule">
+<h2>Two ways in.</h2>
+<div class="two-ways">
+  <div class="way"><h3>First Look</h3><p>Five questions. Your archetype, domain, and scale identified. Your full Purpose Piece profile delivered. A role you can navigate from — specific enough to act on, flexible enough to travel across jobs, projects, and life stages.</p></div>
+  <div class="way"><h3>Deep Dive</h3><p>Everything in First Look, plus an extended exploration of your archetype's shadow, cost, and what living fully from your pattern actually asks of you. For people who want to go past recognition into responsibility.</p></div>
+</div>
+
+<hr class="rule">
+<h2>Where this fits.</h2>
+<p>Purpose Piece is the third threshold — after building the capacity to move and mapping where you actually are, this is where you locate your role in the larger work.</p>
+<p>You can take it at any point in the sequence. You don't need your life fully sorted to take it. You just need to answer honestly from what you've actually lived.</p>
+
+<div class="cta-buttons">
+  <a href="#first-look" class="cta-button">Begin — First Look</a>
+  <a href="#deep-dive" class="cta-button">Begin — Deep Dive</a>
+</div>
+
+<div class="cta-row">
+  <a href="/lifeos" class="cta-link">Back to Life OS</a>
+  <a href="/orienteering" class="cta-link">Start with Orienteering</a>
+</div>
+
+</div>
