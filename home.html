@@ -1,0 +1,147 @@
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --gold: #C8922A; --gold-line: rgba(200,146,42,0.22); --gold-faint: rgba(200,146,42,0.07);
+  --dark: #0F1523; --body: #4A4A4A; --meta: #7A7A72; --bg: #FAFAF7;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --serif-sc: 'Cormorant SC', Georgia, serif;
+}
+body { background: var(--bg); color: var(--body); font-family: var(--serif); font-size: 18px; line-height: 1.7; }
+.page { max-width: 820px; margin: 0 auto; padding: 72px 32px 100px; }
+.eyebrow { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; display: block; margin-bottom: 14px; }
+h1 { font-family: var(--serif); font-size: clamp(44px,6vw,72px); font-weight: 300; color: var(--dark); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 16px; }
+h2 { font-family: var(--serif); font-size: clamp(22px,3vw,30px); font-weight: 600; color: var(--dark); line-height: 1.25; margin: 56px 0 14px; }
+p { font-size: clamp(16px,1.8vw,18px); color: var(--body); line-height: 1.75; margin-bottom: 18px; max-width: 640px; }
+.hero-rule { width: 56px; height: 1px; background: var(--gold); margin: 20px 0 40px; border: none; }
+.rule { border: none; border-top: 1px solid var(--gold-line); margin: 64px 0; }
+.featured { font-family: var(--serif); font-size: clamp(20px,2.6vw,26px); font-weight: 300; font-style: italic; color: var(--dark); line-height: 1.55; border-left: 3px solid var(--gold); padding: 8px 0 8px 28px; margin: 40px 0; max-width: 680px; }
+.brand-line { font-family: var(--serif-sc); font-size: 13px; letter-spacing: 0.18em; color: var(--gold); margin-bottom: 40px; display: block; }
+
+/* Domain grid */
+.domains { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 2px; margin: 28px 0 48px; }
+.domain { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 16px 18px; background: #fff; }
+.domain-name { font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.12em; color: var(--dark); display: block; margin-bottom: 4px; }
+.domain-note { font-size: 13px; font-style: italic; color: var(--meta); line-height: 1.5; }
+
+/* Stage flow */
+.stages { margin: 28px 0 48px; }
+.stage { display: flex; gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(200,146,42,0.09); align-items: flex-start; }
+.stage:last-child { border-bottom: none; }
+.stage-num { font-family: var(--serif-sc); font-size: 10px; letter-spacing: 0.16em; color: var(--gold); min-width: 80px; padding-top: 3px; }
+.stage-text strong { display: block; font-size: 17px; font-weight: 600; color: var(--dark); margin-bottom: 3px; }
+.stage-text span { font-size: 15px; font-style: italic; color: var(--meta); }
+
+/* Tool cards */
+.tools { display: grid; gap: 4px; margin: 28px 0; }
+.tool-card { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 24px 28px; background: #fff; display: flex; flex-direction: column; gap: 8px; }
+.tool-label { font-family: var(--serif-sc); font-size: 10px; letter-spacing: 0.18em; color: var(--gold); }
+.tool-title { font-size: 20px; font-weight: 300; color: var(--dark); line-height: 1.3; }
+.tool-desc { font-size: 15px; font-style: italic; color: var(--meta); line-height: 1.6; }
+.tool-cta { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.14em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.3); padding-bottom: 2px; align-self: flex-start; margin-top: 6px; }
+
+/* CTA section */
+.cta-block { background: var(--dark); padding: 52px 48px; margin: 64px 0 0; }
+.cta-block .eyebrow { color: rgba(200,146,42,0.6); }
+.cta-block h2 { color: var(--gold); margin-top: 12px; font-weight: 300; font-style: italic; font-size: clamp(26px,3.5vw,36px); }
+.cta-block p { color: rgba(250,250,247,0.65); max-width: 560px; }
+.cta-btn { display: inline-block; margin-top: 28px; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.18em; color: var(--gold); border: 1px solid rgba(200,146,42,0.45); padding: 14px 32px; text-decoration: none; }
+</style>
+
+<div class="page">
+
+  <span class="eyebrow">NextUs · Life OS</span>
+  <h1>A navigation framework<br>for life.</h1>
+  <hr class="hero-rule">
+  <p>Most people are not lost. They are unoriented. There is a difference — and the difference changes everything about what kind of attention actually moves a life forward.</p>
+  <p>Life OS is a navigation framework across the seven domains of life. Not a self-improvement system. Not a program that tells you what to do. A framework that helps you see clearly where you are — and where you're going.</p>
+
+  <div class="featured">A life worth living, a future worth building.</div>
+
+  <hr class="rule">
+
+  <h2>The seven domains of life</h2>
+  <p>Every life operates across seven domains. When one is below threshold, it doesn't stay in its lane — it quietly drains everything else. Orientation begins with seeing them honestly, together, as a whole.</p>
+
+  <div class="domains">
+    <div class="domain"><span class="domain-name">Path</span><span class="domain-note">Direction &amp; contribution</span></div>
+    <div class="domain"><span class="domain-name">Spark</span><span class="domain-note">Energy &amp; aliveness</span></div>
+    <div class="domain"><span class="domain-name">Body</span><span class="domain-note">Physical foundation</span></div>
+    <div class="domain"><span class="domain-name">Finances</span><span class="domain-note">Resource &amp; security</span></div>
+    <div class="domain"><span class="domain-name">Relationships</span><span class="domain-note">Connection &amp; depth</span></div>
+    <div class="domain"><span class="domain-name">Inner Game</span><span class="domain-note">Psychology &amp; identity</span></div>
+    <div class="domain"><span class="domain-name">Outer Game</span><span class="domain-note">Skills &amp; expression</span></div>
+  </div>
+
+  <hr class="rule">
+
+  <h2>The navigation sequence</h2>
+  <p>Every life is at a threshold. The threshold tells you what kind of attention will actually move it — and what kind of attention, however well-intentioned, won't land.</p>
+
+  <div class="stages">
+    <div class="stage">
+      <span class="stage-num">Stage One</span>
+      <div class="stage-text"><strong>Regulation</strong><span>The floor beneath everything else. Capacity before content.</span></div>
+    </div>
+    <div class="stage">
+      <span class="stage-num">Stage Two</span>
+      <div class="stage-text"><strong>Orientation</strong><span>An honest map of where you actually are across all seven domains.</span></div>
+    </div>
+    <div class="stage">
+      <span class="stage-num">Stage Three</span>
+      <div class="stage-text"><strong>Alignment</strong><span>Your pattern recognised. What you are here to contribute.</span></div>
+    </div>
+    <div class="stage">
+      <span class="stage-num">Stage Four</span>
+      <div class="stage-text"><strong>Identity</strong><span>Living consistently from who you actually are.</span></div>
+    </div>
+    <div class="stage">
+      <span class="stage-num">Stage Five</span>
+      <div class="stage-text"><strong>Contribution</strong><span>Beyond yourself. The move from personal navigation to collective future.</span></div>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <h2>The tools</h2>
+
+  <div class="tools">
+    <div class="tool-card">
+      <span class="tool-label">Life OS · Foundation</span>
+      <span class="tool-title">The nervous system layer. The floor before the work.</span>
+      <span class="tool-desc">For those who need capacity infrastructure before anything else will hold.</span>
+      <a href="/foundation" class="tool-cta">Learn more →</a>
+    </div>
+    <div class="tool-card">
+      <span class="tool-label">Life OS · Orienteering</span>
+      <span class="tool-title">Seven domains. One honest map.</span>
+      <span class="tool-desc">A guided conversation about the full terrain of your life — every area that matters, seen together as a whole.</span>
+      <a href="/orienteering" class="tool-cta">Start here →</a>
+    </div>
+    <div class="tool-card">
+      <span class="tool-label">Life OS · Purpose Piece</span>
+      <span class="tool-title">You already have a pattern. Most people never get a name for it.</span>
+      <span class="tool-desc">Pattern recognition from what you've already lived. Not a personality test.</span>
+      <a href="/purpose-piece" class="tool-cta">Learn more →</a>
+    </div>
+    <div class="tool-card">
+      <span class="tool-label">Life OS · Pulse</span>
+      <span class="tool-title">Clarity isn't something you arrive at. It's something you maintain.</span>
+      <span class="tool-desc">The daily practice, weekly rhythm, and quarterly reset that keeps your map current over time.</span>
+      <a href="/pulse" class="tool-cta">Learn more →</a>
+    </div>
+    <div class="tool-card">
+      <span class="tool-label">Work Directly With Nik</span>
+      <span class="tool-title">From processing to building.</span>
+      <span class="tool-desc">Rooted in the full ecosystem. Built around where you actually are and where you're going.</span>
+      <a href="/work-with-nik" class="tool-cta">Learn more →</a>
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <span class="eyebrow">The first step</span>
+    <h2>Navigation starts with location.</h2>
+    <p>You cannot navigate from a map you haven't looked at honestly. Orienteering is a guided conversation across all seven domains — the map you take with you.</p>
+    <a href="/orienteering" class="cta-btn">Start with Orienteering</a>
+  </div>
+
+</div>
