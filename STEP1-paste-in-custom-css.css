@@ -1,8 +1,8 @@
 <style>
 /* =============================================
    NEXTUS / LIFE OS — Global Styles
-   Paste this ONCE into:
-   Systeme.io → Settings → Custom CSS
+   Paste this ONCE as a Raw HTML block,
+   ideally at the top of every page in Systeme.io
    ============================================= */
 
 :root {
@@ -13,18 +13,16 @@
   --body: #4A4A4A;
   --meta: #7A7A72;
   --bg: #FAFAF7;
-
   --serif: 'Cormorant Garamond', Georgia, serif;
   --serif-sc: 'Cormorant SC', Georgia, serif;
 }
 
-/* Base layout */
+/* ── Base layout ── */
 
-.nk-page {
+.page {
   max-width: 820px;
   margin: 0 auto;
   padding: 72px 32px 100px;
-
   font-family: var(--serif);
   font-size: 18px;
   line-height: 1.7;
@@ -32,9 +30,9 @@
   text-align: left !important;
 }
 
-/* Eyebrow */
+/* ── Eyebrow ── */
 
-.nk-eyebrow {
+.eyebrow {
   font-family: var(--serif-sc);
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -45,22 +43,22 @@
   text-align: left !important;
 }
 
-/* Headings */
+/* ── Headings ── */
 
-.nk-page h1 {
+.page h1 {
   font-family: var(--serif);
-  font-size: clamp(40px,5.5vw,64px);
+  font-size: clamp(40px, 5.5vw, 64px);
   font-weight: 300;
-  color: var(--gold);
+  color: var(--gold) !important;
   line-height: 1.15;
   letter-spacing: -0.01em;
   margin-bottom: 16px;
   text-align: left !important;
 }
 
-.nk-page h2 {
+.page h2 {
   font-family: var(--serif);
-  font-size: clamp(22px,3vw,30px);
+  font-size: clamp(22px, 3vw, 30px);
   font-weight: 600;
   color: var(--dark);
   line-height: 1.25;
@@ -68,9 +66,9 @@
   text-align: left !important;
 }
 
-.nk-page h3 {
+.page h3 {
   font-family: var(--serif);
-  font-size: clamp(18px,2.2vw,22px);
+  font-size: clamp(18px, 2.2vw, 22px);
   font-weight: 500;
   color: var(--gold);
   line-height: 1.3;
@@ -78,30 +76,28 @@
   text-align: left !important;
 }
 
-/* Hero heading wrapper — makes rule track heading width */
+/* ── Hero rule — tracks heading width ── */
 
-.nk-hero {
+.page .nk-hero {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left !important;
 }
 
-/* Gold hero rule — tracks width of heading above it */
-
-.nk-hero-rule {
-  width: 100%;
+.hero-rule {
+  width: 56px;
   height: 1px;
   background: var(--gold);
   margin: 18px 0 36px;
   border: none;
   display: block;
+  text-align: left !important;
 }
 
-/* Paragraphs */
+/* ── Paragraphs ── */
 
-.nk-page p {
-  font-size: clamp(16px,1.8vw,18px);
+.page p {
+  font-size: clamp(16px, 1.8vw, 18px);
   color: var(--body);
   line-height: 1.75;
   margin-bottom: 18px;
@@ -109,52 +105,47 @@
   text-align: left !important;
 }
 
-/* Horizontal rule */
+/* ── Section rule ── */
 
-.nk-rule {
+.rule {
   border: none;
   border-top: 1px solid var(--gold-line);
   margin: 56px 0;
 }
 
-/* Featured quote */
+/* ── Featured quote ── */
 
-.nk-featured {
+.featured {
   font-family: var(--serif);
-  font-size: clamp(19px,2.4vw,24px);
+  font-size: clamp(19px, 2.4vw, 24px);
   font-weight: 300;
   font-style: italic;
   color: var(--dark);
   line-height: 1.6;
-
   border-left: 3px solid var(--gold);
   padding: 8px 0 8px 28px;
   margin: 40px 0;
-
   max-width: 680px;
   text-align: left !important;
 }
 
-/* Blockquotes */
+/* ── Blockquotes ── */
 
-.nk-page blockquote {
+.page blockquote {
   border-left: 3px solid var(--gold);
   padding: 6px 0 6px 24px;
   margin: 28px 0;
-
   font-style: italic;
   color: var(--body);
-  font-size: clamp(16px,1.8vw,18px);
+  font-size: clamp(16px, 1.8vw, 18px);
   line-height: 1.7;
-
   max-width: 640px;
   text-align: left !important;
 }
 
-.nk-page blockquote cite {
+.page blockquote cite {
   display: block;
   margin-top: 10px;
-
   font-style: normal;
   font-family: var(--serif-sc);
   font-size: 11px;
@@ -162,134 +153,74 @@
   color: var(--meta);
 }
 
-/* Testimonials */
+/* ── Lists ── */
 
-.nk-testi-grid {
-  margin: 32px 0;
-}
-
-.nk-testi {
-  border-bottom: 1px solid var(--gold-line);
-  padding: 24px 0;
-  max-width: 640px;
-}
-
-.nk-testi:last-child {
-  border-bottom: none;
-}
-
-.nk-testi blockquote {
-  border: none;
-  padding: 0;
-  font-size: 16px;
-  margin-bottom: 8px;
-  font-style: italic;
-}
-
-.nk-testi cite {
-  font-family: var(--serif-sc);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--meta);
-  font-style: normal;
-}
-
-/* Clean lists */
-
-.nk-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px;
-}
-
-.nk-list li {
-  padding: 5px 0 5px 22px;
-  position: relative;
-
-  font-size: clamp(16px,1.8vw,18px);
-  color: var(--body);
-  line-height: 1.65;
-
-  max-width: 640px;
+ul.clean,
+ul.routing-list,
+ul.episode-list {
   text-align: left !important;
 }
 
-.nk-list li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: var(--gold);
+ul.clean li,
+ul.routing-list li,
+ul.episode-list li {
+  text-align: left !important;
 }
 
-/* CTA section */
+/* ── CTA row ── */
 
-.nk-cta-area {
-  margin-top: 44px;
-  padding-top: 44px;
-  border-top: 1px solid var(--gold-line);
-}
-
-.nk-cta-row {
+.cta-row {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-
   margin-top: 52px;
   padding-top: 48px;
-
   border-top: 1px solid var(--gold-line);
+  text-align: left !important;
 }
 
-.nk-cta-link {
+.cta-link {
   font-family: var(--serif-sc);
   font-size: 12px;
   letter-spacing: 0.16em;
-
   color: var(--gold);
   text-decoration: none;
-
   border-bottom: 1px solid rgba(200,146,42,0.35);
   padding-bottom: 3px;
 }
 
-/* Buttons */
-
-.nk-cta-btn {
+.cta-button,
+.cta-btn {
   display: inline-block;
-
   font-family: var(--serif-sc);
   font-size: 12px;
   letter-spacing: 0.18em;
-
   color: var(--gold);
   text-decoration: none;
-
   border: 1px solid rgba(200,146,42,0.5);
-
   padding: 12px 28px;
   margin-top: 8px;
 }
 
-/* Responsive */
+/* ── nk- prefixed classes (future use) ── */
+
+.nk-page { text-align: left !important; }
+.nk-eyebrow { text-align: left !important; }
+.nk-page h1, .nk-page h2, .nk-page h3 { text-align: left !important; }
+.nk-page p { text-align: left !important; }
+.nk-hero-rule { width: 100%; height: 1px; background: var(--gold); margin: 18px 0 36px; border: none; display: block; }
+
+/* ── Responsive ── */
 
 @media (max-width: 640px) {
-
-  .nk-two-ways {
-    grid-template-columns: 1fr;
-  }
-
+  .two-ways { grid-template-columns: 1fr; }
+  .nk-two-ways { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
-
-  .nk-page {
-    padding: 44px 20px 76px;
-  }
-
-  .nk-cta-row {
-    flex-direction: column;
-    gap: 22px;
-  }
-
+  .page { padding: 44px 20px 76px; }
+  .nk-page { padding: 44px 20px 76px; }
+  .cta-row { flex-direction: column; gap: 22px; }
+  .nk-cta-row { flex-direction: column; gap: 22px; }
 }
 </style>
