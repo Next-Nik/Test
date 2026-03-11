@@ -1,3 +1,6 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant+SC:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -6,125 +9,253 @@
   --serif: 'Cormorant Garamond', Georgia, serif;
   --serif-sc: 'Cormorant SC', Georgia, serif;
 }
+
 body { background: var(--bg); color: var(--body); font-family: var(--serif); font-size: 18px; line-height: 1.7; }
+
+/* ── SHARED ── */
 .page { max-width: 820px; margin: 0 auto; padding: 72px 32px 100px; }
 .eyebrow { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; display: block; margin-bottom: 14px; }
 h1 { font-family: var(--serif); font-size: clamp(40px,5.5vw,64px); font-weight: 300; color: var(--gold); line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 16px; }
 h2 { font-family: var(--serif); font-size: clamp(22px,3vw,30px); font-weight: 600; color: var(--dark); line-height: 1.25; margin: 56px 0 14px; }
-h3 { font-family: var(--serif); font-size: clamp(18px,2.2vw,22px); font-weight: 500; color: var(--gold); line-height: 1.3; margin: 36px 0 10px; }
 p { font-size: clamp(16px,1.8vw,18px); color: var(--body); line-height: 1.75; margin-bottom: 18px; max-width: 640px; }
-.featured { font-family: var(--serif); font-size: clamp(19px,2.4vw,24px); font-weight: 300; font-style: italic; color: var(--dark); line-height: 1.6; border-left: 3px solid var(--gold); padding: 8px 0 8px 28px; margin: 40px 0; max-width: 680px; }
-blockquote { border-left: 3px solid var(--gold); padding: 6px 0 6px 24px; margin: 28px 0; font-style: italic; color: var(--body); font-size: clamp(16px,1.8vw,18px); line-height: 1.7; max-width: 640px; }
-blockquote cite { display: block; margin-top: 10px; font-style: normal; font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--meta); }
-.rule { border: none; border-top: 1px solid var(--gold-line); margin: 56px 0; }
-.sign-off { font-family: var(--serif); font-size: clamp(18px,2.2vw,22px); font-weight: 600; font-style: italic; color: var(--dark); margin: 44px 0 8px; }
-.cta-row { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 52px; padding-top: 48px; border-top: 1px solid var(--gold-line); }
+.hero-rule { width: 56px; height: 1px; background: var(--gold); margin: 20px 0 40px; border: none; display: block; }
+.rule { border: none; border-top: 1px solid var(--gold-line); margin: 64px 0; }
+.featured { font-family: var(--serif); font-size: clamp(20px,2.6vw,26px); font-weight: 300; font-style: italic; color: var(--dark); line-height: 1.55; border-left: 3px solid var(--gold); padding: 8px 0 8px 28px; margin: 40px 0; max-width: 680px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 52px; padding-top: 44px; border-top: 1px solid var(--gold-line); align-items: center; }
 .cta-link { font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.16em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.35); padding-bottom: 3px; }
-.hero-rule { width: 56px; height: 1px; background: var(--gold); margin: 18px 0 36px; }
-.hero-sub { font-size: clamp(14px,1.5vw,16px); color: var(--meta); font-style: italic; margin-bottom: 8px; }
-ul.clean { list-style: none; padding: 0; margin: 0 0 20px; }
-ul.clean li { padding: 5px 0 5px 22px; position: relative; font-size: clamp(16px,1.8vw,18px); color: var(--body); max-width: 640px; line-height: 1.65; }
-ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
-.routing-list { list-style: none; padding: 0; margin: 20px 0 28px; }
-.routing-list li { padding: 9px 0 9px 28px; position: relative; font-style: italic; color: var(--body); font-size: clamp(16px,1.8vw,18px); border-bottom: 1px solid rgba(200,146,42,0.09); max-width: 620px; }
-.routing-list li::before { content: "→"; position: absolute; left: 0; color: var(--gold); }
-.tool-card { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 28px 28px 22px; margin-bottom: 4px; background: #FAFAF7; }
-.tool-card h3 { margin-top: 0; }
-.tool-card .threshold { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--meta); font-style: italic; margin: 10px 0 14px; }
-.tool-card .tool-cta { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.14em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.3); padding-bottom: 2px; }
-.domain-grid { display: flex; flex-wrap: wrap; gap: 0 20px; margin: 20px 0 28px; }
-.domain-grid span { font-family: var(--serif-sc); font-size: 13px; letter-spacing: 0.08em; color: var(--dark); padding: 3px 0; }
-.era-block { border-left: 2px solid var(--gold-line); padding: 12px 0 12px 24px; margin: 18px 0; }
-.era-block strong { display: block; font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 4px; }
-.era-block p { margin-bottom: 0; font-style: italic; font-size: 15px; }
-.episode-list { list-style: none; padding: 0; margin: 18px 0 24px; }
-.episode-list li { font-size: 16px; color: var(--body); padding: 7px 0 7px 22px; position: relative; border-bottom: 1px solid rgba(200,146,42,0.08); max-width: 580px; }
-.episode-list li::before { content: "→"; position: absolute; left: 0; color: var(--gold); }
-.proof-featured { background: var(--gold-faint); border-left: 3px solid var(--gold); padding: 28px 28px 22px; margin: 36px 0; }
-.proof-featured blockquote { border: none; padding: 0; margin: 0 0 12px; font-size: clamp(17px,2vw,20px); }
-.proof-featured cite { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--meta); font-style: normal; }
-.testimonials-grid { margin: 32px 0; }
-.testi { border-bottom: 1px solid var(--gold-line); padding: 24px 0; max-width: 640px; }
-.testi:last-child { border-bottom: none; }
-.testi blockquote { border: none; padding: 0; font-size: 16px; margin-bottom: 8px; }
-.testi cite { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.1em; color: var(--meta); font-style: normal; }
-.lenses { display: grid; gap: 4px; margin: 28px 0; }
-.lens { border-left: 3px solid var(--gold-line); padding: 14px 0 14px 20px; }
-.lens strong { display: block; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 4px; }
-.lens p { margin: 0; font-size: 16px; }
-.archetype-ex { background: var(--gold-faint); padding: 20px 24px; margin: 20px 0; font-style: italic; font-size: 16px; color: var(--dark); line-height: 1.65; max-width: 600px; }
-.two-ways { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 28px 0; }
-.way { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 22px 22px 18px; background: #FAFAF7; }
-.way h3 { margin-top: 0; font-size: 18px; }
-.way p { font-size: 15px; margin-bottom: 8px; }
-.pulse-rhythms { display: grid; gap: 4px; margin: 28px 0; }
-.rhythm { border-left: 3px solid var(--gold-line); padding: 16px 0 16px 22px; }
-.rhythm strong { display: block; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 6px; }
-.rhythm p { margin: 0; font-size: 16px; }
-.cta-button { display: inline-block; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.18em; color: var(--gold); text-decoration: none; border: 1px solid rgba(200,146,42,0.5); padding: 12px 28px; margin-top: 40px; }
-.cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
-@media (max-width: 640px) { .two-ways { grid-template-columns: 1fr; } }
-@media (max-width: 600px) { .page { padding: 44px 20px 76px; } .cta-row { flex-direction: column; gap: 22px; } }
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant+SC:wght@300;400;500&display=swap" rel="stylesheet">
 
+/* ── SECTION DIVIDER ── */
+.section-divider {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gold-line);
+}
+.section-divider-mark {
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* ── NEXTUS SECTION — standard left-aligned ── */
+.nextus-section { background: var(--bg); }
+
+.fractal-note {
+  border-left: 3px solid var(--gold);
+  padding: 18px 0 18px 28px;
+  margin: 40px 0;
+}
+.fractal-note p { margin: 0; font-size: clamp(16px,1.8vw,18px); font-style: italic; color: var(--dark); }
+
+.tools-list { margin: 28px 0; }
+.tool-row { display: flex; gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(200,146,42,0.09); align-items: baseline; }
+.tool-row:last-child { border-bottom: none; }
+.tool-name { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.14em; color: var(--gold); min-width: 160px; flex-shrink: 0; }
+.tool-desc { font-size: clamp(15px,1.6vw,16px); font-style: italic; color: var(--meta); line-height: 1.6; }
+
+/* ── NIK SECTION — mirrored right-aligned ── */
+.nik-section { background: var(--bg); }
+.nik-section .page { text-align: right; }
+.nik-section p { margin-left: auto; margin-right: 0; }
+.nik-section .eyebrow { text-align: right; }
+.nik-section h1 { text-align: right; }
+.nik-section h2 { text-align: right; }
+.nik-section .hero-rule { margin: 20px 0 40px auto; }
+.nik-section .rule { margin: 64px 0; }
+
+.nik-section .featured {
+  border-left: none;
+  border-right: 3px solid var(--gold);
+  padding: 8px 28px 8px 0;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+.nik-section .fractal-note {
+  border-left: none;
+  border-right: 3px solid var(--gold);
+  padding: 18px 28px 18px 0;
+  text-align: right;
+  margin-left: auto;
+}
+
+.nik-section .cta-row { justify-content: flex-end; }
+
+.nik-section blockquote {
+  border-left: none;
+  border-right: 3px solid var(--gold);
+  padding: 6px 24px 6px 0;
+  margin-left: auto;
+  text-align: right;
+  font-style: italic;
+  color: var(--body);
+  font-size: clamp(16px,1.8vw,18px);
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+.nik-sign-off {
+  font-family: var(--serif);
+  font-size: clamp(18px,2.2vw,22px);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--dark);
+  margin: 44px 0 8px;
+  text-align: right;
+}
+
+.more-coming {
+  font-family: var(--serif-sc);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  text-align: right;
+  margin: 32px 0;
+}
+
+@media (max-width: 600px) {
+  .page { padding: 44px 20px 76px; }
+  .tool-row { flex-direction: column; gap: 4px; }
+  .tool-name { min-width: auto; }
+}
+</style>
+
+<!-- ═══════════════════════════════════════════
+     SECTION ONE — NEXUS / THE WORK
+     Macro to micro. Left-aligned.
+════════════════════════════════════════════ -->
+<div class="nextus-section">
 <div class="page">
 
-<span class="eyebrow">NextUs · Life OS</span>
-<h1>Nik Wood</h1>
-<p class="hero-sub">Founder, Life OS &amp; NextUs · Mexico City</p>
-<div class="hero-rule"></div>
+  <span class="eyebrow">NextUs · Life OS</span>
+  <h1>A life worth living,<br>a future worth building.</h1>
+  <hr class="hero-rule">
 
-<div class="featured">Seven years of silence isn't a gap to explain away — it's proof that the work is real. I didn't rebrand. I didn't pivot for market reasons. I went through the very thing this ecosystem is designed to help people navigate: a skull fracture, cancer, the loss of my mother, and the loss of the friend who saved my life when I broke my skull. What came out the other side isn't a new product line. It's a fundamentally different understanding of what this work is for — and the scale it needs to operate at.</div>
+  <p>Imagine a world where human beings are genuinely living up to their potential. The planet is vibrant, the ecosystem is thriving, individuals are oriented — not just busy. Where the people working on the most consequential problems of our time can see each other, coordinate, and compound their effort. Where we are stewards of this planet rather than consumers of it.</p>
+  <p>That world is not a fantasy. It is a direction. And the distance between here and there is not primarily a resource problem, a technology problem, or a policy problem.</p>
+  <p>It is a navigation problem. And a problem of commitment.</p>
 
-<hr class="rule">
-<h2>Where it started.</h2>
-<p>My mother was a naturopathic doctor and a shaman. She surrounded me with healers, teachers, and practitioners — people who understood that the work of becoming a full human being was serious, worth doing, and worth doing well. That world shaped how I see everything.</p>
-<p>There were challenges during my youth. Abuse and bullying. Experiences I knew I needed to move through — not around, not past, but through — and do it in a way that left me stronger on the other side.</p>
-<p>Jim Rohn's line became an operating principle: you are the average of the five people you spend the most time with. I took that seriously. I read everything. I took every course I could find. I started training formally while I was still a teenager — NLP, hypnotherapy, Timeline Therapy — while most of my peers were still figuring out what they wanted to do with their lives.</p>
-<p>I was trying to understand how transformation actually worked — not as a concept, but as a lived process. I've been doing this work ever since. I'm forty-seven now.</p>
-<p>Eventually, people started noticing a shift in me. They wanted that shift for themselves. They asked if they could hire me to help them get there. That's how the coaching started.</p>
+  <div class="featured">What we can see clearly, we can choose. And what we choose, we can move toward. What we can coordinate around, we can change.</div>
 
-<hr class="rule">
-<h2>What the work is.</h2>
-<p>I help people see who they really are.</p>
-<p>I hold a frame that keeps that vision upright until I'm not needed anymore — until my clients can hold it themselves, and fly. I see possibility and speak it into existence. I protect and advocate for someone's Horizon Self — the person they're becoming — until they're aligned and doing that work on their own.</p>
-<p>That's harder to name than it sounds. It doesn't fit neatly into the category of coaching. It's not therapy. It's not consulting. It's a particular kind of witnessing — the ability to see what's already there before the person themselves can hold it steadily, and to stay present with that vision across time.</p>
+  <p>Brilliant, committed people are already doing the work — in every domain, at every scale. But progress is fragmented. Effort is misallocated. The farmer restoring soil carbon in Kenya doesn't necessarily know about the financing mechanism in Amsterdam that could fund her work. The person ready to change their life doesn't know which kind of attention will actually move it.</p>
+  <p>The gap, in both cases, is orientation and connection.</p>
 
-<hr class="rule">
-<h2>What that looks like in practice.</h2>
-<p>Years ago I was working with a client who was also a friend — Ben. He'd been running a business for a year and a half. It had flatlined. Barely paying the bills, causing him real stress. Through our work together, we found what was underneath it.</p>
-<p>Someone had put a thought into his mind that people who ran social enterprises were fake — that they were taking advantage of the good nature of humans. Somewhere, his subconscious had decided that if he were to succeed running a social enterprise, he'd be one of those people. And he wasn't okay with that.</p>
-<p>Once he could see that belief clearly — once he could see that he could run his business with honor and integrity — something unlocked. He went from ,000 a month to 0,000 the following month. Then 00,000 the month after that. The business kept building.</p>
-<p>We also worked on what I call the Inner Game. Through that work he met his now-fiancée, built his dream house, and had many incredible adventures. Ben has been on the podcast twice. He tells the story better than I do.</p>
-<p>That kind of result isn't about me. It's about what becomes possible when someone can finally see themselves clearly and stop working against their own capacity.</p>
+  <hr class="rule">
 
-<hr class="rule">
-<h2>The years in between.</h2>
-<p>The Life Athletics Podcast launched in 2015. For five years I had conversations with people doing extraordinary work — building lives, building businesses, building themselves. The show grew. The work deepened.</p>
-<p>Then the threshold years came. A skull fracture. Cancer. The death of my mother. The death of the friend who had saved my life when I broke my skull. These weren't separate events — they were a sequence that dismantled the life I had built and required me to navigate, genuinely, the very terrain I had been helping others find their way through.</p>
-<p>I've spoken publicly about the skull fracture — Episode 197 of the podcast is called Near Death &amp; Rebirth. The rest I've held more quietly. I'm naming them here not because they need to be disclosed, but because they need to be understood as the context for everything that came after.</p>
-<p>What came out of those years wasn't a return to coaching. It was an architecture.</p>
+  <h2>Two scales. One architecture.</h2>
 
-<hr class="rule">
-<h2>What the work became.</h2>
-<p>Out of those years came a framework for navigating a life — and eventually, for navigating the future we're building together.</p>
-<p>Life OS is the personal navigation infrastructure — mapping the seven domains of life (Path, Spark, Body, Finances, Relationships, Inner Game, Outer Game) so you can see where you actually are and move from clarity. Purpose Piece surfaces the pattern beneath how someone is naturally built to contribute. Horizon Path is the facilitated crossing for people ready to change not just what they do, but who they are. NextMen is the men's container. Pulse is the ongoing practice that keeps the map current over time.</p>
-<p>NextUs is the civilizational layer — a coordination platform for the people working across the seven domains of the future. The same navigation physics that apply to one life apply at collective scale. That's not a metaphor. It's structural.</p>
-<p>The podcast relaunched in 2024 as NextUs — 222 episodes across ten years, two eras, one continuous inquiry.</p>
+  <p>NextUs operates at the civilisational scale — a coordination layer for the people working across the domains of the future. Sense-making, orientation, and visibility for a fragmented world.</p>
+  <p>Life OS operates at the personal scale — a navigation framework for individuals. Seven domains. Honest mapping. Tools that build the capacity to move from clarity rather than compensation.</p>
 
-<hr class="rule">
-<h2>The vision.</h2>
-<p>I'm living into a world where everyone is firmly on their path and actively levelling up toward their full-yes life — a world where the godspark of humanity is awakened and amplified.</p>
-<p>Everyone has a connection to the Divine. I call it the godspark. That spark — the animating divine fragment in every living thing — is what all of this is in service of. Living into a world where everyone is linked to that internal godspark, fully unlocked, tapped into their innate greatness: that's my Horizon. That's where I'm pointed. That's where I'm heading.</p>
-<p>What would be possible from that place is beyond my comprehension.</p>
-<p class="sign-off">A life worth living, a future worth building.</p>
+  <div class="fractal-note">
+    <p>These are not separate projects. The same navigation physics that move one life move a civilisation. A person who has learned to see their own life clearly is more capable of contributing to the larger work. It is the architecture of life.</p>
+  </div>
 
-<div class="cta-row">
-  <a href="/work-with-nik" class="cta-link">Work With Nik</a>
-  <a href="/podcast" class="cta-link">Listen to the Podcast</a>
-  <a href="/lifeos" class="cta-link">Explore Life OS</a>
+  <hr class="rule">
+
+  <h2>The tools.</h2>
+  <p>Life OS is the personal navigation layer. Each tool addresses one threshold in the sequence — the specific kind of gap that, when unresolved, makes the next stage unsustainable.</p>
+
+  <div class="tools-list">
+    <div class="tool-row">
+      <span class="tool-name">Foundation</span>
+      <span class="tool-desc">The nervous system layer. Capacity before content — the floor that makes everything else sustainable.</span>
+    </div>
+    <div class="tool-row">
+      <span class="tool-name">Orienteering</span>
+      <span class="tool-desc">A diagnostic map across all seven domains of life. Where you actually are, honestly placed.</span>
+    </div>
+    <div class="tool-row">
+      <span class="tool-name">Purpose Piece</span>
+      <span class="tool-desc">The pattern beneath how you're naturally built to contribute. Not a personality test — recognition.</span>
+    </div>
+    <div class="tool-row">
+      <span class="tool-name">Pulse</span>
+      <span class="tool-desc">The ongoing practice that keeps your map current. Clarity maintained over time, not arrived at once.</span>
+    </div>
+    <div class="tool-row">
+      <span class="tool-name">Horizon Leap</span>
+      <span class="tool-desc">A guided crossing for people ready to change not just what they do, but who they are. The moment when insight becomes identity.</span>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a href="/start" class="cta-link">Find your entry point →</a>
+    <a href="/lifeos" class="cta-link">Explore Life OS →</a>
+  </div>
+
+</div>
 </div>
 
+<!-- ═══════════════════════════════════════════
+     SECTION DIVIDER
+════════════════════════════════════════════ -->
+<div style="padding: 64px 0;">
+  <div class="section-divider">
+    <div class="section-divider-mark"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION TWO — NIK
+     Personal. Right-aligned. Mirrored.
+════════════════════════════════════════════ -->
+<div class="nik-section">
+<div class="page">
+
+  <span class="eyebrow">Nik Wood · Founder</span>
+  <h1>The person<br>behind the work.</h1>
+  <hr class="hero-rule">
+
+  <p>I've been at this for a while. My mother was a naturopathic doctor, a shaman, and an adventurer. She surrounded me with healers, teachers, and practitioners — people who understood that the work of becoming a full human being was serious, worth doing, and worth doing well.</p>
+  <p>I started training formally as a teenager — NLP, hypnotherapy, Timeline Therapy — while most of my peers were still figuring out what they wanted to do with their lives. I was trying to understand how transformation actually worked. Not as a concept. As a lived process.</p>
+  <p>Eventually, people started noticing a shift in me. They asked if I could help them find it for themselves. That's how the work started. I've been doing this ever since.</p>
+
+  <hr class="rule">
+
+  <h2>What the work actually is.</h2>
+
+  <p>I help people see who they really are. I hold a frame that keeps that vision upright until they can hold it themselves — until they can see their own Horizon Self clearly enough to stop working against it.</p>
+  <p>That's harder to name than it sounds. It doesn't fit neatly into coaching, therapy, or consulting. It's a particular kind of witnessing — the ability to see what's already there before the person can hold it steadily, and to stay present with that vision across time.</p>
+
+  <blockquote>BK had been running his business for eighteen months. It had flatlined. Through our work together, we found what was underneath it — a belief, planted by someone else, that success in his field meant taking advantage of people. His subconscious had decided that if he succeeded, he'd become someone he wasn't okay with being. Once he could see that clearly, something unlocked. The business moved. Significantly. But more than that — he met his now-fiancée, built his dream house, and found his way into a life he'd stopped believing was available to him. That kind of result isn't about me. It's about what becomes possible when someone can finally see themselves clearly.</blockquote>
+
+  <hr class="rule">
+
+  <h2>The years that changed everything.</h2>
+
+  <div class="featured">The Life Athletics Podcast launched in 2015. For years, long-form conversations about navigating a life worth living. Then I was literally cracked open — and I went through the very terrain I had been helping others find their way through.</div>
+
+  <p>2019 to now have been filled with challenging life moments that shifted how I think and who I am. First, a skull fracture — a freak accident at a wellness workshop — cracked me open in ways beyond just the bone. A few years later my mother died. Then I was diagnosed with cancer and operated on. Then the death of one of my best friends, the guy who had saved my life when I broke my skull.</p>
+  <p>All of this had me face death and life through a new lens.</p>
+  <p>These weren't separate events. They were a sequence — a dismantling that required me to navigate, genuinely and without performance, everything this work is designed for. I've spoken publicly about the fracture. The rest I've held more quietly. I name them here not as disclosure, but as context. What came out of those years wasn't a return to what I was building before. It was a fractal expansion of it. I started to see personal development as a key part of civilisational development and vice versa.</p>
+
+  <p class="more-coming">More is coming.</p>
+
+  <hr class="rule">
+
+  <p>The podcast relaunched in 2024 as NextUs — 222 episodes across ten years, two eras, one continuous inquiry. The ecosystem is live and growing. The first NextMen cohort launches in Mexico City.</p>
+  <p>If you want to understand the work, the best place to start is Orienteering — an honest map of where you actually are across all seven domains. From there, everything else becomes navigable.</p>
+  <p>If you want to work with me directly, <a href="CONTACT_LINK" class="cta-link">reach out</a>.</p>
+
+  <p class="nik-sign-off">A life worth living, a future worth building.</p>
+
+  <div class="cta-row">
+    <a href="/work-with-nik" class="cta-link">Work directly with Nik →</a>
+    <a href="/podcast" class="cta-link">Listen to the podcast →</a>
+  </div>
+
+</div>
 </div>
