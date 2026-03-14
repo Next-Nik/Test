@@ -99,9 +99,12 @@
   .nk-page { padding: 44px 20px 76px; }
   .nk-cta-block { padding: 40px 24px; }
   .nk-horizon { padding: 28px 24px; }
-  .nx-grid { flex-wrap: wrap; }
-  .nx-col { min-width: 140px; flex: none; width: 46%; }
+  .nx-grid { flex-wrap: wrap; gap: 0; }
+  .nx-col { width: 50%; min-width: 0; padding: 0 6px 28px; }
   .nx-divider { display: none; }
+  .nx-item { font-size: 14px; padding: 7px 4px; }
+  .nx-col-label { font-size: 10px; margin-bottom: 12px; }
+  .nx-stage-marker { font-size: 9px; }
 }
 </style>
 
@@ -191,7 +194,7 @@
             <div class="nx-item" onclick="openModal('Scale','Province / State','Regional scale. Operating within geographic, political, and ecological boundaries that span multiple communities.','')">Province / State<span class="nx-tooltip">Regional scale.</span></div>
             <div class="nx-item" onclick="openModal('Scale','Country','National systems, policy, and culture. Where institutional and governmental structures operate.','')">Country<span class="nx-tooltip">National systems and culture.</span></div>
             <div class="nx-item" onclick="openModal('Scale','Continent','Cross-border, multi-national. Shared geography and civilisational patterns that span nations.','')">Continent<span class="nx-tooltip">Cross-border, regional.</span></div>
-            <div class="nx-item" onclick="openModal('Scale','Global','Planetary and species-level. The scale of the longest game — intergenerational, civilisational.','')">Global<span class="nx-tooltip">Planetary, the longest game.</span></div>
+            <div class="nx-item" onclick="openModal('Scale','Global','Planetary and species-level. The scale of the longest game — intergenerational, civilisational. ...for now.','')">Global<span class="nx-tooltip">The longest game. ...for now.</span></div>
           </div>
         </div>
 
