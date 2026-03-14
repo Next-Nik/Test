@@ -24,11 +24,19 @@
 
 .nk-page h2 { font-family: var(--serif); font-size: clamp(22px,3vw,30px); font-weight: 600; color: var(--dark); line-height: 1.25; margin: 56px 0 14px; }
 
+/* Hero centring */
+.nk-hero { text-align: center; padding: 48px 0 0; position: relative; }
+.nk-hero::before { content: ''; display: block; width: 1px; height: 64px; background: linear-gradient(to bottom, transparent, var(--gold-line)); margin: 0 auto 48px; }
+
 /* Loop opening */
-.nk-loop { margin: 0 0 32px; max-width: 660px; }
+.nk-loop { margin: 0 auto 32px; max-width: 660px; }
 .nk-loop-line { font-family: var(--serif); font-size: clamp(22px,3vw,32px); font-weight: 300; color: var(--body); line-height: 1.55; display: block; }
 .nk-loop-bridge { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; display: block; margin: 28px 0 12px; font-weight: 400; }
 .nk-loop-question { font-family: var(--serif); font-size: clamp(22px,3vw,32px); font-weight: 300; color: var(--dark); line-height: 1.55; display: block; }
+
+/* Hero rule and brand — centred */
+.nk-hero-rule { width: 56px; height: 1px; background: var(--gold); margin: 28px auto 32px; border: none; display: block; }
+.nk-featured-hero { font-family: var(--serif); font-size: clamp(18px,2.2vw,22px); font-weight: 300; font-style: italic; color: var(--dark); line-height: 1.55; margin: 0 0 64px; }
 
 /* Dev Nav Portal */
 .nk-portal { background: var(--gold-faint); border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 36px 36px 32px; margin: 0 0 56px; }
@@ -85,18 +93,17 @@
 <div class="nk-page">
 
   <!-- ── OPENING: THE LOOP ── -->
-  <span class="nk-eyebrow">NextUs · Life OS</span>
-
-  <div class="nk-loop">
-    <span class="nk-loop-line">The future we want to live into is given by who we are being in the present.</span>
-    <span class="nk-loop-line">Who we are in the present is given by the future we're living into.</span>
-    <span class="nk-loop-bridge">That's the work.</span>
-    <span class="nk-loop-question">What are we capable of?</span>
+  <div class="nk-hero">
+    <span class="nk-eyebrow">NextUs · Life OS</span>
+    <div class="nk-loop">
+      <span class="nk-loop-line">The future we want to live into is given by who we are being in the present.</span>
+      <span class="nk-loop-line">Who we are in the present is given by the future we're living into.</span>
+      <span class="nk-loop-bridge">That's the work.</span>
+      <span class="nk-loop-question">What are we capable of?</span>
+    </div>
+    <hr class="nk-hero-rule">
+    <p class="nk-featured-hero">A life worth living, a future worth building.</p>
   </div>
-
-  <hr class="nk-hero-rule">
-
-  <div class="nk-featured">A life worth living, a future worth building.</div>
 
   <hr class="nk-rule">
 
