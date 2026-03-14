@@ -16,63 +16,67 @@
 
 .nk-page p { font-family: var(--serif); font-size: clamp(16px,1.8vw,18px); color: var(--body); line-height: 1.75; margin-bottom: 18px; max-width: 640px; font-weight: 400; }
 
-.nk-hero-rule { width: 56px; height: 1px; background: var(--gold); margin: 20px 0 40px; border: none; display: block; }
-
 .nk-rule { border: none; border-top: 1px solid var(--gold-line); margin: 64px 0; display: block; }
 
-.nk-featured { font-family: var(--serif); font-size: clamp(20px,2.6vw,26px); font-weight: 300; font-style: italic; color: var(--dark); line-height: 1.55; border-left: 3px solid var(--gold); padding: 8px 0 8px 28px; margin: 40px 0; max-width: 680px; }
-
-.nk-page h2 { font-family: var(--serif); font-size: clamp(22px,3vw,30px); font-weight: 600; color: var(--dark); line-height: 1.25; margin: 56px 0 14px; }
-
-/* Hero centring */
+/* Hero */
 .nk-hero { text-align: center; padding: 48px 0 0; }
 .nk-hero-line { width: 1px; height: 64px; background: linear-gradient(to bottom, transparent, rgba(200,146,42,0.22)); margin: 0 auto 32px; }
-
-/* Eyebrow — the large statement */
-.nk-hero .nk-eyebrow { font-size: clamp(28px,4vw,48px); letter-spacing: 0.15em; margin-bottom: 40px; line-height: 1.2; }
-
-/* Loop opening */
+.nk-hero .nk-eyebrow { font-size: clamp(28px,4vw,48px); letter-spacing: 0.15em; margin-bottom: 40px; line-height: 1.2; display: block; text-align: center; }
 .nk-loop { margin: 0 auto 40px; max-width: 660px; }
-.nk-loop-line { font-family: var(--serif); font-size: clamp(22px,3vw,32px); font-weight: 300; color: var(--body); line-height: 1.55; display: block; }
-.nk-loop-bridge { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; display: block; margin: 28px 0 12px; font-weight: 400; }
-.nk-loop-question { font-family: var(--serif); font-size: clamp(22px,3vw,32px); font-weight: 300; color: var(--dark); line-height: 1.55; display: block; }
-
-/* Hero rule and brand — centred */
+.nk-loop-line { font-family: var(--serif); font-size: clamp(22px,3vw,32px); font-weight: 300; color: var(--body); line-height: 1.55; display: block; text-align: center; }
+.nk-loop-bridge { font-family: var(--serif-sc); font-size: 16px; letter-spacing: 0.22em; color: var(--gold); text-transform: uppercase; display: block; margin: 28px 0 12px; font-weight: 400; text-align: center; }
+.nk-loop-question { font-family: var(--serif); font-size: clamp(22px,3vw,32px); font-weight: 300; color: var(--dark); line-height: 1.55; display: block; text-align: center; }
 .nk-hero-rule { width: 56px; height: 1px; background: var(--gold); margin: 28px auto 32px; border: none; display: block; }
-.nk-featured-hero { font-family: var(--serif); font-size: clamp(18px,2.2vw,22px); font-weight: 300; font-style: italic; color: var(--dark); line-height: 1.55; margin: 0 0 64px; text-align: center; }
+.nk-hero-brand { font-family: var(--serif); font-size: clamp(18px,2.2vw,22px); font-weight: 300; font-style: italic; color: var(--dark); display: block; text-align: center; max-width: 100%; margin: 0 0 64px; }
 
-/* Dev Nav Portal */
-.nk-portal { background: var(--gold-faint); border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 36px 36px 32px; margin: 0 0 56px; }
-.nk-portal-intro { font-family: var(--serif); font-size: clamp(16px,1.8vw,18px); color: var(--body); line-height: 1.75; margin-bottom: 24px; max-width: 600px; font-weight: 400; font-style: italic; }
-.nk-portal-thresholds { list-style: none; padding: 0; margin: 0 0 28px; }
-.nk-portal-thresholds li { font-family: var(--serif); font-size: clamp(15px,1.6vw,16px); color: var(--body); padding: 9px 0 9px 24px; position: relative; border-bottom: 1px solid rgba(200,146,42,0.09); line-height: 1.55; max-width: 600px; }
-.nk-portal-thresholds li:last-child { border-bottom: none; }
-.nk-portal-thresholds li::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
-.nk-portal-cta { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.16em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.35); padding-bottom: 3px; font-weight: 400; }
+/* Philosophy section */
+.nk-philosophy { margin: 0 0 56px; }
+.nk-philosophy p { font-size: clamp(16px,1.8vw,18px); color: var(--body); line-height: 1.75; margin-bottom: 18px; max-width: 640px; }
+.nk-philosophy .nk-closing-line { font-family: var(--serif); font-size: clamp(18px,2.2vw,22px); font-weight: 300; font-style: italic; color: var(--dark); margin-top: 8px; }
 
-/* Domains */
-.nk-domains { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 2px; margin: 28px 0 48px; }
-.nk-domain { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 16px 18px; background: #FFFFFF; }
-.nk-domain-name { font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.12em; color: var(--dark); display: block; margin-bottom: 4px; font-weight: 400; }
-.nk-domain-note { font-size: 13px; font-style: italic; color: var(--meta); line-height: 1.5; font-family: var(--serif); }
+/* Visual explainer */
+.nk-explainer-section { margin: 0 0 56px; }
+.nk-explainer-intro { margin-bottom: 32px; }
+.nk-explainer-intro p { max-width: 640px; }
 
-/* Stages */
-.nk-stages { margin: 28px 0 48px; }
-.nk-stage { display: flex; gap: 20px; padding: 16px 0; border-bottom: 1px solid rgba(200,146,42,0.09); align-items: flex-start; }
-.nk-stage:last-child { border-bottom: none; }
-.nk-stage-num { font-family: var(--serif-sc); font-size: 10px; letter-spacing: 0.16em; color: var(--gold); min-width: 72px; padding-top: 3px; font-weight: 400; }
-.nk-stage-text strong { display: block; font-size: 17px; font-weight: 600; color: var(--dark); margin-bottom: 3px; font-family: var(--serif); }
-.nk-stage-text span { font-size: 15px; font-style: italic; color: var(--meta); font-family: var(--serif); font-weight: 400; }
+/* Visual widget styles */
+.nx-wrap { font-family: 'Cormorant Garamond', Georgia, serif; padding: 0 0 2rem; max-width: 100%; }
+.nx-grid { display: flex; align-items: flex-start; gap: 4px; justify-content: center; flex-wrap: nowrap; margin-bottom: 2rem; }
+.nx-col { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 0; }
+.nx-col-label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #C8922A; margin-bottom: 10px; font-family: 'Cormorant SC', Georgia, serif; font-weight: 500; cursor: pointer; border-bottom: 1px solid transparent; transition: border-color 0.15s; position: relative; padding-bottom: 2px; text-align: center; line-height: 1.4; }
+.nx-col-label:hover { border-bottom-color: #C8922A; }
+.nx-divider { width: 1px; background: rgba(200,146,42,0.18); align-self: stretch; margin-top: 34px; flex-shrink: 0; }
+.nx-list { display: flex; flex-direction: column; gap: 2px; align-items: center; width: 100%; }
+.nx-item { font-size: 13px; font-weight: 400; color: #4A4A4A; padding: 5px 6px; border-bottom: 1px solid transparent; cursor: pointer; transition: border-color 0.15s, color 0.15s; line-height: 1.4; text-align: center; position: relative; width: 100%; }
+.nx-item:hover { border-bottom-color: #C8922A; color: #C8922A; }
+.nx-item.healing { color: #7A7A72; }
+.nx-item.healing:hover { color: #C8922A; }
+.nx-tooltip { display: none; position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: #FAF8F4; border: 1px solid #C8922A; padding: 8px 12px; font-size: 12px; font-style: italic; color: #4A4A4A; z-index: 20; font-family: sans-serif; line-height: 1.5; width: 170px; text-align: left; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,0.10); }
+.nx-tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #C8922A; }
+.nx-tooltip::before { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 7px solid transparent; border-top-color: #FAF8F4; margin-top: -1px; z-index: 1; }
+.nx-item:hover .nx-tooltip { display: block; }
+.nx-col-label:hover .nx-tooltip { display: block; }
+.nx-stage-divider { width: 80%; height: 1px; background: rgba(200,146,42,0.2); margin: 4px auto; }
+.nx-stage-marker { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(200,146,42,0.5); font-family: sans-serif; text-align: center; margin: 2px 0; }
+.nx-explainer-rule { border: none; border-top: 0.5px solid rgba(200,146,42,0.3); margin: 0 0 1rem; }
+.nx-cta-line { font-size: 13px; color: #7A7A72; font-style: italic; text-align: center; margin-bottom: 0.5rem; font-family: sans-serif; }
+.nx-glossary { display: block; text-align: center; margin-top: 0.75rem; font-size: 12px; font-family: sans-serif; color: #7A7A72; letter-spacing: 0.08em; text-decoration: none; transition: color 0.15s; }
+.nx-glossary:hover { color: #C8922A; }
 
-/* Tools */
-.nk-tools { display: grid; gap: 4px; margin: 28px 0; }
-.nk-tool-entry { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 24px 28px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px; }
-.nk-tool-label { font-family: var(--serif-sc); font-size: 10px; letter-spacing: 0.18em; color: var(--gold); font-weight: 400; }
-.nk-tool-title { font-family: var(--serif); font-size: 20px; font-weight: 300; color: var(--dark); line-height: 1.3; }
-.nk-tool-desc { font-family: var(--serif); font-size: 15px; font-style: italic; color: var(--meta); line-height: 1.6; font-weight: 400; }
-.nk-tool-link { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.14em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.3); padding-bottom: 2px; align-self: flex-start; margin-top: 6px; font-weight: 400; }
+/* Modal */
+.nx-modal-wrap { display: none; }
+.nx-modal-wrap.open { display: block; }
+.nx-modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center; padding: 1rem; z-index: 100; }
+.nx-modal { background: #FAF8F4; border: 1px solid #C8922A; padding: 2rem; max-width: 400px; width: 100%; position: relative; font-family: 'Cormorant Garamond', Georgia, serif; }
+.nx-modal-close { position: absolute; top: 12px; right: 14px; font-size: 18px; cursor: pointer; color: #7A7A72; background: none; border: none; line-height: 1; }
+.nx-modal-close:hover { color: #C8922A; }
+.nx-modal-cat { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #C8922A; font-family: sans-serif; margin-bottom: 6px; }
+.nx-modal-term { font-size: 22px; font-weight: 400; color: #0F1523; margin-bottom: 4px; }
+.nx-modal-question { font-size: 15px; font-style: italic; color: #C8922A; margin-bottom: 10px; }
+.nx-modal-def { font-size: 15px; line-height: 1.7; color: #4A4A4A; font-style: italic; margin-bottom: 14px; }
+.nx-modal-footer { font-size: 12px; font-family: sans-serif; color: #7A7A72; border-top: 0.5px solid rgba(200,146,42,0.3); padding-top: 10px; }
 
-/* NextUs horizon block */
+/* NextUs block */
 .nk-horizon { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 36px 36px 32px; margin: 0 0 4px; background: #FFFFFF; }
 .nk-horizon h3 { font-family: var(--serif); font-size: clamp(20px,2.5vw,26px); font-weight: 300; color: var(--dark); line-height: 1.3; margin-bottom: 16px; font-style: italic; }
 .nk-horizon p { font-family: var(--serif); font-size: clamp(15px,1.7vw,17px); color: var(--body); line-height: 1.75; margin-bottom: 14px; max-width: 580px; font-weight: 400; }
@@ -80,142 +84,144 @@
 
 /* CTA block */
 .nk-cta-block { background: var(--dark); padding: 52px 48px; margin: 64px 0 0; }
-.nk-cta-block .nk-eyebrow { color: rgba(200,146,42,0.6); }
-.nk-cta-block h2 { color: var(--gold); margin-top: 12px; font-weight: 300; font-style: italic; font-size: clamp(26px, 3.5vw, 36px); font-family: var(--serif); }
-.nk-cta-block p { color: rgba(250,250,247,0.65); max-width: 560px; }
-.nk-cta-block-btn { display: inline-block; margin-top: 28px; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.18em; color: var(--gold); border: 1px solid rgba(200,146,42,0.45); padding: 14px 32px; text-decoration: none; font-weight: 400; }
+.nk-cta-block .nk-eyebrow { color: rgba(200,146,42,0.6); font-size: 11px; letter-spacing: 0.18em; }
+.nk-cta-block h2 { color: var(--gold); margin-top: 12px; font-weight: 300; font-style: italic; font-size: clamp(26px,3.5vw,36px); font-family: var(--serif); margin-bottom: 14px; }
+.nk-cta-block p { color: rgba(250,250,247,0.65); max-width: 560px; margin-bottom: 12px; }
+.nk-cta-links { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 32px; }
+.nk-cta-btn { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.16em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.35); padding-bottom: 3px; font-weight: 400; }
 
-/* Podcast strip */
+/* Podcast */
 .nk-podcast { border-top: 1px solid var(--gold-line); padding: 40px 0 0; margin: 64px 0 0; }
 .nk-podcast p { font-size: clamp(15px,1.7vw,17px); color: var(--meta); font-style: italic; max-width: 560px; margin-bottom: 12px; }
 .nk-podcast-link { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.16em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.35); padding-bottom: 3px; font-weight: 400; }
 
-@media (max-width: 600px) { .nk-page { padding: 44px 20px 76px; } .nk-cta-block { padding: 40px 24px; } .nk-horizon { padding: 28px 24px; } }
+@media (max-width: 600px) {
+  .nk-page { padding: 44px 20px 76px; }
+  .nk-cta-block { padding: 40px 24px; }
+  .nk-horizon { padding: 28px 24px; }
+  .nx-grid { flex-wrap: wrap; }
+  .nx-col { min-width: 140px; flex: none; width: 46%; }
+  .nx-divider { display: none; }
+}
 </style>
 
 <div class="nk-page">
 
-  <!-- ── OPENING: THE LOOP ── -->
+  <!-- ── HERO ── -->
   <div class="nk-hero">
+    <img src="https://raw.githubusercontent.com/Next-Nik/Website/main/logo.png" alt="NextUs" style="display:block; margin: 0 auto 24px; height: clamp(64px, 10vw, 96px); width: auto;">
     <div class="nk-hero-line"></div>
     <span class="nk-eyebrow" style="display:block; text-align:center;">NextUs · Life OS</span>
-    <div class="nk-loop" style="text-align:center;">
+    <div class="nk-loop">
       <span class="nk-loop-line" style="display:block; text-align:center;">The future we want to live into is given by who we are being in the present.</span>
       <span class="nk-loop-line" style="display:block; text-align:center;">Who we are in the present is given by the future we're living into.</span>
       <span class="nk-loop-bridge" style="display:block; text-align:center;">That's the work.</span>
       <span class="nk-loop-question" style="display:block; text-align:center;">What are we capable of?</span>
     </div>
-    <hr class="nk-hero-rule">
-    <p class="nk-featured-hero" style="text-align:center; max-width:100%;">A life worth living, a future worth building.</p>
+    <div class="nk-hero-rule"></div>
+    <span class="nk-hero-brand" style="display:block; text-align:center; max-width:100%;">A life worth living, a future worth building.</span>
   </div>
 
   <hr class="nk-rule">
 
-  <!-- ── DEV NAV PORTAL ── -->
-  <div class="nk-portal">
+  <!-- ── PHILOSOPHY ── -->
+  <div class="nk-philosophy">
     <span class="nk-eyebrow">Where are you right now?</span>
-    <p class="nk-portal-intro">Development stalls when the work doesn't match where you actually are. Find where you are — and where to go next.</p>
-    <ul class="nk-portal-thresholds">
-      <li>I know what I need to do. I just can't seem to make myself do it.</li>
-      <li>I'm stable but living reactively. No honest picture of where I am.</li>
-      <li>I can see my life clearly. I don't know what I'm here to contribute.</li>
-      <li>I know who I want to be. I keep reverting to who I've always been.</li>
-      <li>My life works. Something about its scale feels insufficient.</li>
-    </ul>
-    <a href="https://life-os-devnav.vercel.app" target="_blank" class="nk-portal-cta">Find where to go next →</a>
+    <p>Humanity as a whole is mostly operating the way a person operates when they have no clear direction and are carrying unresolved trauma — that's because humanity as a whole is mostly comprised of individuals who don't have clear goals and are carrying unresolved trauma.</p>
+    <p>That's the starting point, not our end point.</p>
+    <p>There are tools that work at every stage of development. The work is matching the right one to the right stage — and then moving on from there.</p>
+    <p>Life on earth and humanity could be genuinely thriving, if that's what we individually and collectively aimed ourselves at.</p>
+    <p class="nk-closing-line">Let's see what we're capable of.</p>
   </div>
 
-  <!-- ── ORIENTATION ── -->
-  <p>Most people are not lost. They are unoriented. There is a difference — and the difference changes everything about what kind of attention actually moves a life forward.</p>
-  <p>Life OS is a diagnostic tool for the whole of life. Not a self-improvement system. Not a program that tells you what to do. A framework that shows you clearly where you are across every domain that matters — so you can navigate from truth, not pressure.</p>
+  <!-- ── VISUAL EXPLAINER ── -->
+  <div class="nk-explainer-section">
+    <div class="nk-explainer-intro">
+      <span class="nk-eyebrow">Navigating the ecosystem</span>
+      <p>Life is not a single thread. It is an ecosystem — four interconnected frameworks, each one illuminating a different dimension of what it means to navigate a life and a future worth building. Hover any term to see what it means. Click to go deeper.</p>
+    </div>
 
-  <hr class="nk-rule">
+    <div class="nx-wrap">
+      <div class="nx-grid">
 
-  <!-- ── SEVEN DOMAINS ── -->
-  <h2>The seven domains of life</h2>
-  <p>Life is not a single thread. It is an ecosystem — seven domains, each one affecting everything else. When one falls below where it needs to be, it doesn't stay in its lane. It quietly drains the rest. Orientation begins with seeing them honestly, together, as a whole.</p>
+        <div class="nx-col">
+          <div class="nx-col-label" onclick="openModal('The Framework','NextUs Domains','The seven areas of collective life that need tending. Every meaningful challenge humanity faces lives in one or more of these domains. Together they describe the full terrain of civilisational health.','')">
+            NextUs<br>Domains
+            <span class="nx-tooltip">The terrain of collective life.</span>
+          </div>
+          <div class="nx-list">
+            <div class="nx-item" onclick="openModal('NextUs Domain','Human Being','Personal development, consciousness, inner work, transformation. The domain of who we are becoming — individually and collectively.','')">Human Being<span class="nx-tooltip">Who we are becoming.</span></div>
+            <div class="nx-item" onclick="openModal('NextUs Domain','Society','Governance, culture, community, social structures. How we organise life together.','')">Society<span class="nx-tooltip">How we live together.</span></div>
+            <div class="nx-item" onclick="openModal('NextUs Domain','Nature','Environment, ecology, planetary health, regeneration. The living systems we depend on.','')">Nature<span class="nx-tooltip">The living systems we depend on.</span></div>
+            <div class="nx-item" onclick="openModal('NextUs Domain','Technology','Tools, infrastructure, innovation. What we build to extend our reach.','')">Technology<span class="nx-tooltip">What we build to extend our reach.</span></div>
+            <div class="nx-item" onclick="openModal('NextUs Domain','Finance & Economy','Resources, exchange, wealth, value creation and distribution. How we move what matters.','')">Finance &amp; Economy<span class="nx-tooltip">How we move what matters.</span></div>
+            <div class="nx-item" onclick="openModal('NextUs Domain','Legacy','Long-term thinking, intergenerational work, preservation. What we leave behind.','')">Legacy<span class="nx-tooltip">What we leave behind.</span></div>
+            <div class="nx-item" onclick="openModal('NextUs Domain','Vision','Future imagination, possibility, coordination, collective direction. Where we are going.','')">Vision<span class="nx-tooltip">Where we are going.</span></div>
+          </div>
+        </div>
 
-  <div class="nk-domains">
-    <div class="nk-domain"><span class="nk-domain-name">Path</span><span class="nk-domain-note">Direction &amp; contribution</span></div>
-    <div class="nk-domain"><span class="nk-domain-name">Spark</span><span class="nk-domain-note">Energy &amp; aliveness</span></div>
-    <div class="nk-domain"><span class="nk-domain-name">Body</span><span class="nk-domain-note">Physical foundation</span></div>
-    <div class="nk-domain"><span class="nk-domain-name">Finances</span><span class="nk-domain-note">Resource &amp; security</span></div>
-    <div class="nk-domain"><span class="nk-domain-name">Relationships</span><span class="nk-domain-note">Connection &amp; depth</span></div>
-    <div class="nk-domain"><span class="nk-domain-name">Inner Game</span><span class="nk-domain-note">Psychology &amp; identity</span></div>
-    <div class="nk-domain"><span class="nk-domain-name">Outer Game</span><span class="nk-domain-note">Skills &amp; expression</span></div>
-  </div>
+        <div class="nx-divider"></div>
 
-  <hr class="nk-rule">
+        <div class="nx-col">
+          <div class="nx-col-label" onclick="openModal('The Framework','Life OS Domains','The seven domains of a human life. Each one affects the others. When one falls below where it needs to be, it quietly drains the rest. Orientation begins with seeing all seven honestly, together.','')">
+            Life OS<br>Domains
+            <span class="nx-tooltip">The terrain of a human life.</span>
+          </div>
+          <div class="nx-list">
+            <div class="nx-item" onclick="openModal('Life OS Domain','Path','Your contribution, calling, and the work you are here to do. Not your job title — the through-line of meaningful work beneath whatever you are currently doing.','')">Path<span class="nx-tooltip">The work you're here to do.</span></div>
+            <div class="nx-item" onclick="openModal('Life OS Domain','Spark','The animating fire — aliveness, joy, play. When Spark is low, everything else runs on fumes.','')">Spark<span class="nx-tooltip">Is the fire on?</span></div>
+            <div class="nx-item" onclick="openModal('Life OS Domain','Body','Physical vitality, health, energy, and embodiment. Your relationship with the physical instrument you inhabit.','')">Body<span class="nx-tooltip">Your physical foundation.</span></div>
+            <div class="nx-item" onclick="openModal('Life OS Domain','Finances','Your relationship with resources, security, and money. The full picture of how money moves through your life.','')">Finances<span class="nx-tooltip">Your relationship with resources.</span></div>
+            <div class="nx-item" onclick="openModal('Life OS Domain','Relationships','Intimacy, friendship, community, and belonging. The quality of connection, not just its presence.','')">Relationships<span class="nx-tooltip">Connection and belonging.</span></div>
+            <div class="nx-item" onclick="openModal('Life OS Domain','Inner Game','Your relationship with yourself — beliefs, values, self-trust, and inner authority.','')">Inner Game<span class="nx-tooltip">Your relationship with yourself.</span></div>
+            <div class="nx-item" onclick="openModal('Life OS Domain','Outer Game','How you show up in the world — your skills, presence, and external expression.','')">Outer Game<span class="nx-tooltip">How you show up in the world.</span></div>
+          </div>
+        </div>
 
-  <!-- ── NAVIGATION SEQUENCE ── -->
-  <h2>The navigation sequence</h2>
-  <p>Every stage calls for different work. The wrong kind of attention, however well-intentioned, won't land.</p>
+        <div class="nx-divider"></div>
 
-  <div class="nk-stages">
-    <div class="nk-stage">
-      <span class="nk-stage-num">Stage 1</span>
-      <div class="nk-stage-text"><strong>Regulation</strong><span>The floor beneath everything else. Capacity before content.</span></div>
-    </div>
-    <div class="nk-stage">
-      <span class="nk-stage-num">Stage 2</span>
-      <div class="nk-stage-text"><strong>Orientation</strong><span>An honest map of where you actually are across all seven domains.</span></div>
-    </div>
-    <div class="nk-stage">
-      <span class="nk-stage-num">Stage 3</span>
-      <div class="nk-stage-text"><strong>Alignment</strong><span>Your pattern recognised. What you are here to contribute.</span></div>
-    </div>
-    <div class="nk-stage">
-      <span class="nk-stage-num">Stage 4</span>
-      <div class="nk-stage-text"><strong>Identity</strong><span>Living consistently from who you actually are.</span></div>
-    </div>
-    <div class="nk-stage">
-      <span class="nk-stage-num">Stage 5</span>
-      <div class="nk-stage-text"><strong>Contribution</strong><span>Beyond yourself. The move from personal navigation to collective future.</span></div>
-    </div>
-  </div>
+        <div class="nx-col">
+          <div class="nx-col-label" onclick="openModal('The Framework','Scale','The level at which your life and contribution operates. Not a measure of ambition — a description of where your effort actually lands. Every scale is necessary. Every scale is valid.','')">
+            Scale
+            <span class="nx-tooltip">Where your effort actually lands.</span>
+          </div>
+          <div class="nx-list">
+            <div class="nx-item" onclick="openModal('Scale','Home','The individual and household level. The most immediate sphere — your own life, your own body, your own four walls. Everything else builds from here.','')">Home<span class="nx-tooltip">Your most immediate sphere.</span></div>
+            <div class="nx-item" onclick="openModal('Scale','Neighbourhood','Immediate community. Face-to-face relationships. Where change is felt personally and directly.','')">Neighbourhood<span class="nx-tooltip">Face-to-face community.</span></div>
+            <div class="nx-item" onclick="openModal('Scale','City','Urban and local civic scale. Where community infrastructure, local governance, and shared space meet.','')">City<span class="nx-tooltip">Local civic scale.</span></div>
+            <div class="nx-item" onclick="openModal('Scale','Province / State','Regional scale. Operating within geographic, political, and ecological boundaries that span multiple communities.','')">Province / State<span class="nx-tooltip">Regional scale.</span></div>
+            <div class="nx-item" onclick="openModal('Scale','Country','National systems, policy, and culture. Where institutional and governmental structures operate.','')">Country<span class="nx-tooltip">National systems and culture.</span></div>
+            <div class="nx-item" onclick="openModal('Scale','Continent','Cross-border, multi-national. Shared geography and civilisational patterns that span nations.','')">Continent<span class="nx-tooltip">Cross-border, regional.</span></div>
+            <div class="nx-item" onclick="openModal('Scale','Global','Planetary and species-level. The scale of the longest game — intergenerational, civilisational.','')">Global<span class="nx-tooltip">Planetary, the longest game.</span></div>
+          </div>
+        </div>
 
-  <hr class="nk-rule">
+        <div class="nx-divider"></div>
 
-  <!-- ── TOOLS ── -->
-  <h2>The tools</h2>
-  <p>Five tools. Each one built for a specific stage of the navigation.</p>
+        <div class="nx-col">
+          <div class="nx-col-label" onclick="openModal('The Framework','Stages of Healing & Development','Healing and development move in stages. Each stage has its own question and its own work. The first four are healing — they have a completion point. The last three are development — they are ongoing. Matching the right work to the right stage is everything.','')">
+            Stages of Healing<br>&amp; Development
+            <span class="nx-tooltip">Each stage has its own work.</span>
+          </div>
+          <div class="nx-list">
+            <div class="nx-stage-marker">Healing</div>
+            <div class="nx-item healing" onclick="openModal('Healing','Safety','Am I allowed to exist? This is not conceptual — it is nervous-system, body-level permission to be alive. Without it, everything feels like threat, growth feels dangerous, and insight destabilises rather than liberates. The work here is regulation, containment, and stabilisation.','Am I allowed to exist?')">Safety<span class="nx-tooltip">Am I allowed to exist?</span></div>
+            <div class="nx-item healing" onclick="openModal('Healing','Autonomy','Am I allowed to want? This is where the self starts moving again — not goals, not strategy, but desire. The work here is reclaiming the right to direct oneself and meeting the shame around wanting.','Am I allowed to want?')">Autonomy<span class="nx-tooltip">Am I allowed to want?</span></div>
+            <div class="nx-item healing" onclick="openModal('Healing','Orientation','Where am I actually? Reality contact — honest self-assessment, mapping life domains, seeing patterns without collapse. This is the end of fantasy healing.','Where am I actually?')">Orientation<span class="nx-tooltip">Where am I actually?</span></div>
+            <div class="nx-item healing" onclick="openModal('Healing','Integration','Can I hold all of myself? Metabolising past experience, reconciling contradictions, reducing internal fragmentation. This is where energy stops leaking.','Can I hold all of myself?')">Integration<span class="nx-tooltip">Can I hold all of myself?</span></div>
+            <div class="nx-stage-divider"></div>
+            <div class="nx-stage-marker">Development</div>
+            <div class="nx-item" onclick="openModal('Development','Agency','Can I act from self? Now action becomes possible — not reactive effort, not proving, but true choice. Behaviour stabilises, discipline emerges naturally, self-trust begins.','Can I act from self?')">Agency<span class="nx-tooltip">Can I act from self?</span></div>
+            <div class="nx-item" onclick="openModal('Development','Embodiment','Can I live as who I am? Identity stops being conceptual — behaviour aligns with values, the nervous system tolerates expansion, relationships reorganise.','Can I live as who I am?')">Embodiment<span class="nx-tooltip">Can I live as who I am?</span></div>
+            <div class="nx-item" onclick="openModal('Development','Contribution','What is my life in service of? Meaning stabilises the psyche. Contribution integrates the self. Purpose regulates existential anxiety. This is not saviour energy — it is participation in reality.','What is my life in service of?')">Contribution<span class="nx-tooltip">What is my life in service of?</span></div>
+          </div>
+        </div>
 
-  <div class="nk-tools">
-    <div class="nk-tool-entry">
-      <span class="nk-tool-label">Life OS · Foundation</span>
-      <span class="nk-tool-title">The nervous system layer. The floor before the work.</span>
-      <span class="nk-tool-desc">For those who need capacity infrastructure before anything else will hold.</span>
-      <a href="/foundation" class="nk-tool-link">Learn more →</a>
-    </div>
-    <div class="nk-tool-entry">
-      <span class="nk-tool-label">Life OS · Orienteering</span>
-      <span class="nk-tool-title">Seven domains. One honest map.</span>
-      <span class="nk-tool-desc">A guided conversation about the full terrain of your life — every area that matters, seen together as a whole.</span>
-      <a href="https://lifeos-olive-six.vercel.app" target="_blank" class="nk-tool-link">Start here →</a>
-    </div>
-    <div class="nk-tool-entry">
-      <span class="nk-tool-label">Life OS · Purpose Piece</span>
-      <span class="nk-tool-title">You already have a pattern. Most people never get a name for it.</span>
-      <span class="nk-tool-desc">Pattern recognition from what you've already lived. Not a personality test.</span>
-      <a href="/purpose-piece" class="nk-tool-link">Learn more →</a>
-    </div>
-    <div class="nk-tool-entry">
-      <span class="nk-tool-label">Life OS · Pulse</span>
-      <span class="nk-tool-title">Clarity isn't something you arrive at. It's something you maintain.</span>
-      <span class="nk-tool-desc">The daily practice, weekly rhythm, and quarterly reset that keeps your map current over time.</span>
-      <a href="/pulse" class="nk-tool-link">Learn more →</a>
-    </div>
-    <div class="nk-tool-entry">
-      <span class="nk-tool-label">Life OS · Horizon Leap</span>
-      <span class="nk-tool-title">The moment when insight becomes identity.</span>
-      <span class="nk-tool-desc">A guided crossing for people ready to change not just what they do, but who they are.</span>
-      <a href="/horizon-leap" class="nk-tool-link">Learn more →</a>
-    </div>
-    <div class="nk-tool-entry">
-      <span class="nk-tool-label">Work Directly With Nik</span>
-      <span class="nk-tool-title">From processing to building.</span>
-      <span class="nk-tool-desc">Rooted in the full ecosystem. Built around where you actually are and where you're going.</span>
-      <a href="/work-with-nik" class="nk-tool-link">Learn more →</a>
+      </div>
+
+      <hr class="nx-explainer-rule">
+      <div class="nx-cta-line">Hover any term to see what it means. Click to go deeper.</div>
+      <a class="nx-glossary" href="/glossary">Full glossary of terms →</a>
     </div>
   </div>
 
@@ -235,8 +241,13 @@
   <div class="nk-cta-block">
     <span class="nk-eyebrow">The first step</span>
     <h2>Navigation starts with location.</h2>
-    <p>You cannot navigate from a map you haven't looked at honestly. Orienteering is a guided conversation across all seven domains — the map you take with you.</p>
-    <a href="https://lifeos-olive-six.vercel.app" target="_blank" class="nk-cta-block-btn">Start with Orienteering</a>
+    <p>You cannot navigate from a map you haven't looked at honestly.</p>
+    <p>Start where you are. The tools meet you there.</p>
+    <div class="nk-cta-links">
+      <a href="https://lifeos-olive-six.vercel.app" target="_blank" class="nk-cta-btn">Start with Orienteering →</a>
+      <a href="https://life-os-purpose-piece-v2.vercel.app" target="_blank" class="nk-cta-btn">Find your Purpose Piece →</a>
+      <a href="/work-with-nik" class="nk-cta-btn">Work directly with Nik →</a>
+    </div>
   </div>
 
   <!-- ── PODCAST ── -->
@@ -247,3 +258,38 @@
   </div>
 
 </div>
+
+<!-- ── MODAL ── -->
+<div class="nx-modal-wrap" id="nx-modal-wrap">
+  <div class="nx-modal-bg" onclick="closeModalBg(event)">
+    <div class="nx-modal">
+      <button class="nx-modal-close" onclick="closeModal()">✕</button>
+      <div class="nx-modal-cat" id="nx-modal-cat"></div>
+      <div class="nx-modal-term" id="nx-modal-term"></div>
+      <div class="nx-modal-question" id="nx-modal-question"></div>
+      <div class="nx-modal-def" id="nx-modal-def"></div>
+      <div class="nx-modal-footer">Part of the Horizon Language — the vocabulary of the NextUs ecosystem.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(cat, term, def, question) {
+  document.getElementById('nx-modal-cat').textContent = cat;
+  document.getElementById('nx-modal-term').textContent = term;
+  document.getElementById('nx-modal-def').textContent = def;
+  var q = document.getElementById('nx-modal-question');
+  q.textContent = question || '';
+  q.style.display = question ? 'block' : 'none';
+  document.getElementById('nx-modal-wrap').classList.add('open');
+}
+function closeModal() {
+  document.getElementById('nx-modal-wrap').classList.remove('open');
+}
+function closeModalBg(e) {
+  if (e.target.classList.contains('nx-modal-bg')) closeModal();
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
