@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
   --gold: #C8922A; --gold-line: rgba(200,146,42,0.22); --gold-faint: rgba(200,146,42,0.07);
-  --dark: #0F1523; --body: #4A4A4A; --meta: #7A7A72; --bg: #FAFAF7;
+  --dark: #0F1523; --body: #4A4A4A; --meta: #7A7A72; --bg: #FAF8F4;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --serif-sc: 'Cormorant SC', Georgia, serif;
 }
@@ -28,41 +28,69 @@ ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--
 .routing-list { list-style: none; padding: 0; margin: 20px 0 28px; }
 .routing-list li { padding: 9px 0 9px 28px; position: relative; font-style: italic; color: var(--body); font-size: clamp(16px,1.8vw,18px); border-bottom: 1px solid rgba(200,146,42,0.09); max-width: 620px; }
 .routing-list li::before { content: "→"; position: absolute; left: 0; color: var(--gold); }
-.tool-card { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 28px 28px 22px; margin-bottom: 4px; background: #FAFAF7; }
+.tool-card { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 28px 28px 22px; margin-bottom: 4px; background: #FAF8F4; }
 .tool-card h3 { margin-top: 0; }
 .tool-card .threshold { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--meta); font-style: italic; margin: 10px 0 14px; }
 .tool-card .tool-cta { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.14em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.3); padding-bottom: 2px; }
 .domain-grid { display: flex; flex-wrap: wrap; gap: 0 20px; margin: 20px 0 28px; }
 .domain-grid span { font-family: var(--serif-sc); font-size: 13px; letter-spacing: 0.08em; color: var(--dark); padding: 3px 0; }
-.era-block { border-left: 2px solid var(--gold-line); padding: 12px 0 12px 24px; margin: 18px 0; }
-.era-block strong { display: block; font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 4px; }
-.era-block p { margin-bottom: 0; font-style: italic; font-size: 15px; }
-.episode-list { list-style: none; padding: 0; margin: 18px 0 24px; }
-.episode-list li { font-size: 16px; color: var(--body); padding: 7px 0 7px 22px; position: relative; border-bottom: 1px solid rgba(200,146,42,0.08); max-width: 580px; }
-.episode-list li::before { content: "→"; position: absolute; left: 0; color: var(--gold); }
-.proof-featured { background: var(--gold-faint); border-left: 3px solid var(--gold); padding: 28px 28px 22px; margin: 36px 0; }
-.proof-featured blockquote { border: none; padding: 0; margin: 0 0 12px; font-size: clamp(17px,2vw,20px); }
-.proof-featured cite { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--meta); font-style: normal; }
-.testimonials-grid { margin: 32px 0; }
-.testi { border-bottom: 1px solid var(--gold-line); padding: 24px 0; max-width: 640px; }
-.testi:last-child { border-bottom: none; }
-.testi blockquote { border: none; padding: 0; font-size: 16px; margin-bottom: 8px; }
-.testi cite { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.1em; color: var(--meta); font-style: normal; }
 .lenses { display: grid; gap: 4px; margin: 28px 0; }
 .lens { border-left: 3px solid var(--gold-line); padding: 14px 0 14px 20px; }
 .lens strong { display: block; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 4px; }
 .lens p { margin: 0; font-size: 16px; }
 .archetype-ex { background: var(--gold-faint); padding: 20px 24px; margin: 20px 0; font-style: italic; font-size: 16px; color: var(--dark); line-height: 1.65; max-width: 600px; }
 .two-ways { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 28px 0; }
-.way { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 22px 22px 18px; background: #FAFAF7; }
+.way { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 22px 22px 18px; background: #FAF8F4; }
 .way h3 { margin-top: 0; font-size: 18px; }
 .way p { font-size: 15px; margin-bottom: 8px; }
-.pulse-rhythms { display: grid; gap: 4px; margin: 28px 0; }
-.rhythm { border-left: 3px solid var(--gold-line); padding: 16px 0 16px 22px; }
-.rhythm strong { display: block; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 6px; }
-.rhythm p { margin: 0; font-size: 16px; }
-.cta-button { display: inline-block; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.18em; color: var(--gold); text-decoration: none; border: 1px solid rgba(200,146,42,0.5); padding: 12px 28px; margin-top: 40px; }
+.cta-button { display: inline-block; font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.18em; color: var(--gold); text-decoration: none; border: 1px solid rgba(200,146,42,0.5); padding: 12px 28px; margin-top: 40px; transition: border-color 0.2s, background 0.2s; }
+.cta-button:hover { border-color: var(--gold); background: var(--gold-faint); }
 .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
+
+/* ── VISUAL EXPLAINER ── */
+.explainer-section { margin: 56px 0; padding: 48px 0; border-top: 1px solid var(--gold-line); border-bottom: 1px solid var(--gold-line); }
+.explainer-intro { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; margin-bottom: 32px; }
+
+/* Explainer widget styles */
+.pp-wrap { font-family: 'Cormorant Garamond', Georgia, serif; padding: 1rem 0 2rem; max-width: 680px; margin: 0 auto; }
+.pp-top { display: flex; align-items: flex-start; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.pp-col { display: flex; flex-direction: column; align-items: center; }
+.pp-col-label { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #C8922A; margin-bottom: 12px; font-family: 'Cormorant SC', Georgia, serif; font-weight: 500; cursor: pointer; border-bottom: 1px solid transparent; transition: border-color 0.15s; position: relative; padding-bottom: 2px; }
+.pp-col-label:hover { border-bottom-color: #C8922A; }
+.pp-operator { font-size: 2rem; font-weight: 300; color: #C8922A; line-height: 1; align-self: center; padding-top: 32px; }
+.pp-list { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.pp-item { font-size: 15px; font-weight: 400; color: #4A4A4A; padding: 5px 10px; border-bottom: 1px solid transparent; cursor: pointer; transition: border-color 0.15s, color 0.15s; line-height: 1.4; text-align: center; position: relative; }
+.pp-item:hover { border-bottom-color: #C8922A; color: #C8922A; }
+.pp-tooltip { display: none; position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: #FAF8F4; border: 1px solid #C8922A; padding: 8px 14px; font-size: 12px; font-style: italic; color: #4A4A4A; z-index: 20; font-family: sans-serif; line-height: 1.5; width: 190px; text-align: left; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+.pp-tooltip::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: #C8922A; }
+.pp-tooltip::before { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); border: 7px solid transparent; border-top-color: #FAF8F4; margin-top: -1px; z-index: 1; }
+.pp-item:hover .pp-tooltip { display: block; }
+.pp-col-label:hover .pp-tooltip { display: block; }
+.pp-bottom { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 2rem; }
+.pp-result-label { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #C8922A; font-family: 'Cormorant SC', Georgia, serif; font-weight: 500; cursor: pointer; border-bottom: 1px solid transparent; transition: border-color 0.15s; position: relative; padding-bottom: 2px; }
+.pp-result-label:hover { border-bottom-color: #C8922A; }
+.pp-equals { font-size: 2rem; font-weight: 300; color: #C8922A; line-height: 1; }
+.pp-result-box { border: 1px solid #C8922A; padding: 16px 40px; text-align: center; cursor: pointer; transition: background 0.15s; }
+.pp-result-box:hover { background: rgba(200,146,42,0.06); }
+.pp-result-name { font-size: 22px; font-weight: 400; color: #C8922A; letter-spacing: 0.04em; font-style: italic; }
+.pp-result-sub { font-size: 12px; color: #7A7A72; margin-top: 6px; font-family: sans-serif; }
+.pp-rule { border: none; border-top: 0.5px solid #C8922A; opacity: 0.3; margin: 0 0 1.5rem; }
+.pp-cta-wrap { text-align: center; }
+.pp-cta-line { font-size: 13px; color: #7A7A72; font-style: italic; margin-bottom: 1rem; font-family: sans-serif; }
+.pp-cta { display: inline-block; border: 1px solid #C8922A; color: #C8922A; padding: 10px 28px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; background: transparent; font-family: 'Cormorant SC', Georgia, serif; transition: background 0.15s, color 0.15s; text-decoration: none; }
+.pp-cta:hover { background: #C8922A; color: #fff; }
+.pp-glossary-link { display: block; text-align: center; margin-top: 1.5rem; font-size: 12px; font-family: sans-serif; color: #7A7A72; letter-spacing: 0.08em; text-decoration: none; transition: color 0.15s; }
+.pp-glossary-link:hover { color: #C8922A; }
+.pp-modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; align-items: center; justify-content: center; }
+.pp-modal-bg.open { display: flex; }
+.pp-modal { background: #FAF8F4; border: 1px solid #C8922A; padding: 2rem; max-width: 420px; width: 90%; position: relative; font-family: 'Cormorant Garamond', Georgia, serif; }
+.pp-modal-close { position: absolute; top: 12px; right: 16px; font-size: 18px; cursor: pointer; color: #7A7A72; background: none; border: none; font-family: sans-serif; line-height: 1; }
+.pp-modal-close:hover { color: #C8922A; }
+.pp-modal-category { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #C8922A; font-family: sans-serif; margin-bottom: 6px; }
+.pp-modal-term { font-size: 22px; font-weight: 400; color: #0F1523; margin-bottom: 12px; }
+.pp-modal-def { font-size: 15px; line-height: 1.7; color: #4A4A4A; font-style: italic; margin-bottom: 16px; }
+.pp-modal-footer { font-size: 12px; font-family: sans-serif; color: #7A7A72; border-top: 0.5px solid rgba(200,146,42,0.3); padding-top: 12px; }
+
 @media (max-width: 640px) { .two-ways { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .page { padding: 44px 20px 76px; } .cta-row { flex-direction: column; gap: 22px; } }
 </style>
@@ -94,8 +122,117 @@ ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--
   <div class="lens"><strong>Scale</strong><p>The bandwidth at which you naturally operate. Not ambition. Not status. The scope where you can act with full presence and genuine effectiveness.</p></div>
 </div>
 <p><strong>Archetype + Domain + Scale = Your Purpose Piece.</strong></p>
-<div class="archetype-ex">A Connector in Society at Local scale. A Guardian in Nature at Bioregional scale. An Architect in Vision at Civilizational scale. Same framework. Entirely different people. Entirely different work.</div>
+<div class="archetype-ex">A Connector in Society at Local scale. A Guardian in Nature at Bioregional scale. An Architect in Vision at Civilisational scale. Same framework. Entirely different people. Entirely different work.</div>
 <p>The combination is what locates you. Not the archetype alone. Not the domain alone. The intersection of all three.</p>
+
+<!-- ── VISUAL EXPLAINER ── -->
+<div class="explainer-section">
+  <div class="explainer-intro">Explore the framework</div>
+
+  <div class="pp-wrap">
+    <div class="pp-top">
+
+      <div class="pp-col">
+        <div class="pp-col-label" onclick="openModal('Purpose Piece','Archetype','How you naturally contribute. Not a personality type — a functional role. The specific shape your effort takes when you\'re operating at your best. There are seven.')">
+          Archetype
+          <span class="pp-tooltip">How you naturally contribute to any team or system.</span>
+        </div>
+        <div class="pp-list">
+          <div class="pp-item" onclick="openModal('Archetype','Steward','Tends systems and ensures they remain whole. Maintains, repairs, sustains. Patient with the operational work that keeps things alive.')">Steward<span class="pp-tooltip">Tends systems, keeps them whole.</span></div>
+          <div class="pp-item" onclick="openModal('Archetype','Maker','Builds what doesn\'t exist. Concept to creation. Comfortable with iteration. Values function over perfection.')">Maker<span class="pp-tooltip">Builds what doesn't exist yet.</span></div>
+          <div class="pp-item" onclick="openModal('Archetype','Architect','Designs the structural conditions that determine what can be built at all. Doesn\'t build the thing — designs the container the thing lives inside.')">Architect<span class="pp-tooltip">Designs the conditions for what can be built.</span></div>
+          <div class="pp-item" onclick="openModal('Archetype','Connector','Weaves relationships and creates networks. Sees who needs who. Facilitates without dominating.')">Connector<span class="pp-tooltip">Weaves relationships, sees who needs who.</span></div>
+          <div class="pp-item" onclick="openModal('Archetype','Guardian','Protects what matters and holds boundaries. Recognises threats early. Fierce in protecting, gentle in tending.')">Guardian<span class="pp-tooltip">Protects what matters, holds the line.</span></div>
+          <div class="pp-item" onclick="openModal('Archetype','Explorer','Ventures into unknown territory and brings back what\'s needed. Comfortable with uncertainty.')">Explorer<span class="pp-tooltip">Ventures into the unknown, brings back what's needed.</span></div>
+          <div class="pp-item" onclick="openModal('Archetype','Sage','Holds wisdom and offers perspective that clarifies. Sees patterns across time. Values understanding over action.')">Sage<span class="pp-tooltip">Holds wisdom, offers perspective that clarifies.</span></div>
+        </div>
+      </div>
+
+      <div class="pp-operator">+</div>
+
+      <div class="pp-col">
+        <div class="pp-col-label" onclick="openModal('Purpose Piece','Domain','Where your contribution belongs. The seven domains are the areas of collective life that need tending — from the inner work of human development to the long arc of civilisational vision.')">
+          Domain
+          <span class="pp-tooltip">The area of collective life where your contribution belongs.</span>
+        </div>
+        <div class="pp-list">
+          <div class="pp-item" onclick="openModal('Domain','Human Being','Personal development, consciousness, inner work, transformation. The domain of who we are becoming.')">Human Being<span class="pp-tooltip">Personal development, consciousness, inner work.</span></div>
+          <div class="pp-item" onclick="openModal('Domain','Society','Governance, culture, community, social structures. The domain of how we live together.')">Society<span class="pp-tooltip">Governance, culture, community, social structures.</span></div>
+          <div class="pp-item" onclick="openModal('Domain','Nature','Environment, ecology, planetary health, regeneration. The domain of the living systems we depend on.')">Nature<span class="pp-tooltip">Environment, ecology, planetary health.</span></div>
+          <div class="pp-item" onclick="openModal('Domain','Technology','Tools, infrastructure, innovation, digital and physical systems. The domain of what we build to extend our reach.')">Technology<span class="pp-tooltip">Tools, infrastructure, innovation.</span></div>
+          <div class="pp-item" onclick="openModal('Domain','Finance & Economy','Resources, exchange, wealth, value creation and distribution. The domain of how we move and allocate what matters.')">Finance &amp; Economy<span class="pp-tooltip">Resources, exchange, value creation.</span></div>
+          <div class="pp-item" onclick="openModal('Domain','Legacy','Long-term thinking, intergenerational work, preservation, deep time. The domain of what we leave behind.')">Legacy<span class="pp-tooltip">Long-term thinking, intergenerational work.</span></div>
+          <div class="pp-item" onclick="openModal('Domain','Vision','Future imagination, possibility, coordination, collective direction. The domain of where we are going.')">Vision<span class="pp-tooltip">Future imagination, collective direction.</span></div>
+        </div>
+      </div>
+
+      <div class="pp-operator">+</div>
+
+      <div class="pp-col">
+        <div class="pp-col-label" onclick="openModal('Purpose Piece','Scale','The bandwidth at which your contribution is most coherent right now. Not a measure of ambition — a measure of where your effort actually lands. Bigger is not better. Right is better.')">
+          Scale
+          <span class="pp-tooltip">The bandwidth where your contribution is most coherent right now.</span>
+        </div>
+        <div class="pp-list">
+          <div class="pp-item" onclick="openModal('Scale','Local','Neighbourhood and community level. Face-to-face. Immediate impact. Where change is felt personally and directly.')">Local<span class="pp-tooltip">Neighbourhood, face-to-face, immediate impact.</span></div>
+          <div class="pp-item" onclick="openModal('Scale','Bioregional','Watershed and region level. Multi-community. Operating within ecological and geographic boundaries.')">Bioregional<span class="pp-tooltip">Watershed, region, multi-community.</span></div>
+          <div class="pp-item" onclick="openModal('Scale','Global','International and planetary systems. Cross-border challenges. Where problems require coordination across cultures.')">Global<span class="pp-tooltip">International, cross-border, planetary.</span></div>
+          <div class="pp-item" onclick="openModal('Scale','Civilisational','Intergenerational and species-level. 100+ year timelines. The scale of the longest game.')">Civilisational<span class="pp-tooltip">Intergenerational, species-level, 100+ year horizon.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pp-bottom">
+      <div class="pp-result-label" onclick="openModal('','The Result','Your Purpose Piece is the intersection of all three. Archetype names how you contribute. Domain names where. Scale names the bandwidth at which you\'re most coherent right now. Together they give you a location — not just a description.')">
+        The Result
+        <span class="pp-tooltip">Click to understand what the result actually means.</span>
+      </div>
+      <div class="pp-equals">=</div>
+      <div class="pp-result-box" onclick="openModal('','Your Purpose Piece','The intersection of how you naturally contribute, where that contribution belongs, and the scale at which you\'re most coherent right now. Not a personality type — a location in the work.')">
+        <div class="pp-result-name">Your Purpose Piece</div>
+        <div class="pp-result-sub">where you fit in the work ahead</div>
+      </div>
+    </div>
+
+    <hr class="pp-rule">
+
+    <div class="pp-cta-wrap">
+      <div class="pp-cta-line">Hover any term to see what it means. Click to go deeper.</div>
+      <a class="pp-cta" href="https://life-os-purpose-piece-v2.vercel.app" target="_blank">Find where you fit →</a>
+    </div>
+
+    <a class="pp-glossary-link" href="/glossary">Full glossary of terms →</a>
+  </div>
+</div>
+
+<!-- ── MODAL ── -->
+<div class="pp-modal-bg" id="pp-modal-bg" onclick="closeModalBg(event)">
+  <div class="pp-modal">
+    <button class="pp-modal-close" onclick="closeModal()">✕</button>
+    <div class="pp-modal-category" id="modal-cat"></div>
+    <div class="pp-modal-term" id="modal-term"></div>
+    <div class="pp-modal-def" id="modal-def"></div>
+    <div class="pp-modal-footer">Part of the Horizon Language — the vocabulary of the NextUs ecosystem.</div>
+  </div>
+</div>
+
+<script>
+function openModal(cat, term, def) {
+  document.getElementById('modal-cat').textContent = cat;
+  document.getElementById('modal-term').textContent = term;
+  document.getElementById('modal-def').textContent = def;
+  document.getElementById('pp-modal-bg').classList.add('open');
+}
+function closeModal() {
+  document.getElementById('pp-modal-bg').classList.remove('open');
+}
+function closeModalBg(e) {
+  if (e.target === document.getElementById('pp-modal-bg')) closeModal();
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
 
 <hr class="rule">
 <h2>What the output feels like.</h2>
@@ -105,10 +242,12 @@ ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--
 <p>That moment — the one where a pattern you've been living finally has a name — is the product. Everything else is in service of it.</p>
 
 <hr class="rule">
-<h2>Two ways in.</h2>
-<div class="two-ways">
-  <div class="way"><h3>First Look</h3><p>Five questions. Your archetype, domain, and scale identified. Your full Purpose Piece profile delivered. A role you can navigate from — specific enough to act on, flexible enough to travel across jobs, projects, and life stages.</p></div>
-  <div class="way"><h3>Deep Dive</h3><p>Everything in First Look, plus an extended exploration of your archetype's shadow, cost, and what living fully from your pattern actually asks of you. For people who want to go past recognition into responsibility.</p></div>
+<h2>How it works.</h2>
+<div class="way" style="max-width: 560px;">
+  <h3>First Look</h3>
+  <p>Five questions. Your archetype, domain, and scale identified. Your full Purpose Piece profile delivered. A role you can navigate from — specific enough to act on, flexible enough to travel across jobs, projects, and life stages.</p>
+  <p style="font-size: 15px; color: var(--meta); font-style: italic;">The Deep Dive is offered at the end of the First Look for those who want to go further.</p>
+  <a href="https://life-os-purpose-piece-v2.vercel.app" target="_blank" class="tool-card tool-cta" style="display:inline-block; margin-top:12px; font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.14em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.3); padding-bottom: 2px;">Begin First Look →</a>
 </div>
 
 <hr class="rule">
@@ -117,13 +256,13 @@ ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--
 <p>You can take it at any point in the sequence. You don't need your life fully sorted to take it. You just need to answer honestly from what you've actually lived.</p>
 
 <div class="cta-buttons">
-  <a href="#first-look" class="cta-button">Begin — First Look</a>
-  <a href="#deep-dive" class="cta-button">Begin — Deep Dive</a>
+  <a href="https://life-os-purpose-piece-v2.vercel.app" target="_blank" class="cta-button">Begin — First Look</a>
 </div>
 
 <div class="cta-row">
-  <a href="/lifeos" class="cta-link">Back to Life OS</a>
+  <a href="/life-os" class="cta-link">Back to Life OS</a>
   <a href="/orienteering" class="cta-link">Start with Orienteering</a>
+  <a href="/foundation" class="cta-link">Find your threshold</a>
 </div>
 
 </div>
