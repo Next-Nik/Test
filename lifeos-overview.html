@@ -1,8 +1,9 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #FAF8F4 !important; }
 :root {
   --gold: #C8922A; --gold-line: rgba(200,146,42,0.22); --gold-faint: rgba(200,146,42,0.07);
-  --dark: #0F1523; --body: #4A4A4A; --meta: #7A7A72; --bg: #FAFAF7;
+  --dark: #0F1523; --body: #4A4A4A; --meta: #7A7A72; --bg: #FAF8F4;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --serif-sc: 'Cormorant SC', Georgia, serif;
 }
@@ -28,7 +29,7 @@ ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--
 .routing-list { list-style: none; padding: 0; margin: 20px 0 28px; }
 .routing-list li { padding: 9px 0 9px 28px; position: relative; font-style: italic; color: var(--body); font-size: clamp(16px,1.8vw,18px); border-bottom: 1px solid rgba(200,146,42,0.09); max-width: 620px; }
 .routing-list li::before { content: "→"; position: absolute; left: 0; color: var(--gold); }
-.tool-card { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 28px 28px 22px; margin-bottom: 4px; background: #FAFAF7; }
+.tool-card { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 28px 28px 22px; margin-bottom: 4px; background: #FAF8F4; }
 .tool-card h3 { margin-top: 0; }
 .tool-card .threshold { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.12em; color: var(--meta); font-style: italic; margin: 10px 0 14px; }
 .tool-card .tool-cta { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.14em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.3); padding-bottom: 2px; }
@@ -54,7 +55,7 @@ ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--
 .lens p { margin: 0; font-size: 16px; }
 .archetype-ex { background: var(--gold-faint); padding: 20px 24px; margin: 20px 0; font-style: italic; font-size: 16px; color: var(--dark); line-height: 1.65; max-width: 600px; }
 .two-ways { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 28px 0; }
-.way { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 22px 22px 18px; background: #FAFAF7; }
+.way { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 22px 22px 18px; background: #FAF8F4; }
 .way h3 { margin-top: 0; font-size: 18px; }
 .way p { font-size: 15px; margin-bottom: 8px; }
 .pulse-rhythms { display: grid; gap: 4px; margin: 28px 0; }
@@ -81,7 +82,7 @@ ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--
 <hr class="rule">
 <h2>What Life OS is.</h2>
 <p>Life OS is a set of tools for navigating the key domains of your life. Not a productivity system. Not a self-improvement program. A navigation infrastructure — designed to show you where you are, where you're going, and how you're naturally built to contribute.</p>
-<p>The tools work independently. Each one addresses a specific threshold — a specific kind of gap that, when unresolved, makes the next stage of development unsustainable. Use one or use several. Each one does real work on its own.</p>
+<p>The tools work independently. Each one is built for a specific stage of the journey. Use one or use several. Each one does real work on its own.</p>
 <p>Used together, they form a coherent system. One that compounds over time.</p>
 
 <hr class="rule">
@@ -97,13 +98,13 @@ ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--
 
 <hr class="rule">
 <h2>The tools.</h2>
-<p>Each tool addresses one threshold in the navigation sequence. They can be used in any order — but the sequence exists for a reason.</p>
+<p>Each tool is built for a specific stage of healing and development. They can be used in any order — but the sequence exists for a reason.</p>
 
 <div class="tool-card">
   <h3>Life OS: Foundation</h3>
   <p>The floor that makes everything else possible.</p>
   <p>Before navigation, there is regulation. Foundation is the nervous system layer — a structured audio program that builds the baseline capacity to hold honest self-assessment, sustain practice, and act from choice rather than compensation. If the floor isn't stable, the map doesn't hold.</p>
-  <p class="threshold">Threshold: Regulation — can I sustain the work?</p>
+  <p class="threshold">Stage: Safety &amp; Regulation</p>
   <a href="/foundation" class="tool-cta">Build the foundation →</a>
 </div>
 
@@ -111,23 +112,23 @@ ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--
   <h3>Life OS: Orienteering</h3>
   <p>Seven domains. One honest map.</p>
   <p>Orienteering is the assessment at the heart of Life OS — a guided process that produces a clear, honest picture of where you are across all seven domains, what your Horizon Goals are in each, and which three to focus on next. The orientation conversation is the intervention. The map is what you take with you.</p>
-  <p class="threshold">Threshold: Orientation — where am I, honestly?</p>
+  <p class="threshold">Stage: Orientation</p>
   <a href="/orienteering" class="tool-cta">Get oriented →</a>
 </div>
 
 <div class="tool-card">
   <h3>Life OS: Purpose Piece</h3>
   <p>How you're naturally built to contribute.</p>
-  <p>You already have a pattern — the way you show up when something needs doing. Purpose Piece surfaces it. Through a sequence of questions anchored in real behavior, it identifies your archetype, your natural domain of contribution, and the scale at which your pattern operates most powerfully. Not a personality test. Pattern recognition.</p>
-  <p class="threshold">Threshold: Alignment — what am I built to contribute?</p>
+  <p>You already have a pattern — the way you show up when something needs doing. Purpose Piece surfaces it. Through a sequence of questions anchored in real behaviour, it identifies your archetype, your natural domain of contribution, and the scale at which your pattern operates most powerfully. Not a personality test. Pattern recognition.</p>
+  <p class="threshold">Stage: Alignment</p>
   <a href="/purpose-piece" class="tool-cta">Find your Purpose Piece →</a>
 </div>
 
 <div class="tool-card">
   <h3>Life OS: Pulse</h3>
   <p>Stay honest. Stay in motion.</p>
-  <p>Clarity isn't something you arrive at. It's something you maintain. Pulse is the ongoing navigation layer — the daily T.E.A. check-in, the weekly reflection, and the quarterly reset that keeps your map current over time. Not optimization. Orientation. The practice that makes evolution undeniable.</p>
-  <p class="threshold">Threshold: Ongoing — how am I moving over time?</p>
+  <p>Clarity isn't something you arrive at. It's something you maintain. Pulse is the ongoing navigation layer — the daily check-in, the weekly reflection, and the quarterly reset that keeps your map current over time. Not optimisation. Orientation. The practice that makes evolution undeniable.</p>
+  <p class="threshold">Stage: Agency &amp; Embodiment</p>
   <a href="/pulse" class="tool-cta">Begin Pulse →</a>
 </div>
 
@@ -135,21 +136,23 @@ ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--
   <h3>Life OS: Horizon Leap</h3>
   <p>The moment when insight becomes identity.</p>
   <p>Horizon Leap is a guided crossing for people ready to change not just what they do, but who they are. Through four sequential components — Horizon Life, Horizon Self Vision, Horizon Biography, and Target Goals — it takes you from seeing your Horizon Self clearly to embodying them. Not incremental progress. A discontinuous shift.</p>
-  <p class="threshold">Threshold: Identity — who am I becoming?</p>
+  <p class="threshold">Stage: Identity &amp; Embodiment</p>
   <a href="/horizon-leap" class="tool-cta">Explore Horizon Leap →</a>
 </div>
 
 <hr class="rule">
-<h2>The navigation sequence.</h2>
-<p>The tools follow a logic. Not a mandatory order — but a sequence that describes what makes each stage sustainable:</p>
+<h2>The stages of healing and development.</h2>
+<p>The tools meet you where you are. The seven stages describe the full arc — from the floor beneath everything to contribution at scale:</p>
 <ul class="clean">
-  <li>Foundation → regulation — the floor is stable</li>
-  <li>Orienteering → orientation — the map is honest</li>
-  <li>Purpose Piece → alignment — the contribution is clear</li>
-  <li>Pulse → continuity — the work compounds over time</li>
-  <li>Horizon Leap → identity — who you are becoming takes the wheel</li>
+  <li><strong>Safety</strong> — the nervous system floor. Capacity before content.</li>
+  <li><strong>Autonomy</strong> — reclaiming the right to want and to direct yourself.</li>
+  <li><strong>Orientation</strong> — an honest map of where you actually are.</li>
+  <li><strong>Integration</strong> — holding all of yourself without leaking energy.</li>
+  <li><strong>Agency</strong> — acting from self, not from compensation.</li>
+  <li><strong>Embodiment</strong> — living consistently as who you actually are.</li>
+  <li><strong>Contribution</strong> — what your life is in service of.</li>
 </ul>
-<p>You can enter anywhere. But if something isn't working, the sequence tells you why — and what kind of attention will actually move it.</p>
+<p>You can enter anywhere. But if something isn't working, the stages tell you why — and what kind of attention will actually move it.</p>
 
 <hr class="rule">
 <h2>Not sure where to start?</h2>
@@ -165,12 +168,12 @@ ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--
 
 <hr class="rule">
 <h2>Part of something larger.</h2>
-<p>Life OS is the personal navigation layer. NextUs is the civilizational one.</p>
+<p>Life OS is the personal navigation layer. NextUs is the civilisational one.</p>
 <p>The same seven domains that structure a human life also structure the work of building a future worth living in. The personal tools aren't preparation for that work. They are that work — at the scale of one life. When enough people navigate well, the collective moves differently.</p>
 
 <div class="cta-row">
   <a href="/start" class="cta-link">Find your entry point</a>
-  <a href="/nextus-vision" class="cta-link">Learn about NextUs</a>
+  <a href="/nextus" class="cta-link">Learn about NextUs</a>
 </div>
 
 </div>
