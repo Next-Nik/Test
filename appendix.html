@@ -1,0 +1,240 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #FAF8F4 !important; }
+:root {
+  --gold: #C8922A; --gold-line: rgba(200,146,42,0.22); --gold-faint: rgba(200,146,42,0.07);
+  --dark: #0F1523; --body: #4A4A4A; --meta: #7A7A72;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --serif-sc: 'Cormorant SC', Georgia, serif;
+}
+.page { max-width: 820px; margin: 0 auto; padding: 72px 32px 100px; font-family: var(--serif); font-size: 18px; line-height: 1.7; color: var(--body); }
+.eyebrow { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; display: block; margin-bottom: 14px; }
+h1 { font-family: var(--serif); font-size: clamp(40px,5.5vw,64px); font-weight: 300; color: var(--gold); line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 16px; }
+h2 { font-family: var(--serif); font-size: clamp(22px,3vw,30px); font-weight: 600; color: var(--dark); line-height: 1.25; margin: 56px 0 14px; }
+h3 { font-family: var(--serif); font-size: clamp(18px,2.2vw,22px); font-weight: 500; color: var(--gold); line-height: 1.3; margin: 36px 0 10px; }
+p { font-size: clamp(16px,1.8vw,18px); color: var(--body); line-height: 1.75; margin-bottom: 18px; max-width: 640px; }
+.hero-rule { width: 56px; height: 1px; background: var(--gold); margin: 20px 0 40px; border: none; display: block; }
+.rule { border: none; border-top: 1px solid var(--gold-line); margin: 64px 0; }
+
+/* Jump nav */
+.jump-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 0 0 48px; padding: 24px 28px; border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); background: var(--gold-faint); }
+.jump-nav a { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.14em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.3); padding-bottom: 2px; }
+
+/* Glossary */
+.glossary-grid { display: grid; gap: 2px; margin: 28px 0; }
+.glossary-item { border-bottom: 1px solid rgba(200,146,42,0.1); padding: 16px 0; display: grid; grid-template-columns: 180px 1fr; gap: 24px; align-items: baseline; }
+.glossary-term { font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.12em; color: var(--dark); }
+.glossary-def { font-size: 16px; font-style: italic; color: var(--body); line-height: 1.6; }
+
+/* Framework grids */
+.domain-list { display: grid; gap: 2px; margin: 28px 0; }
+.domain-item { display: grid; grid-template-columns: 160px 1fr; gap: 24px; padding: 14px 0; border-bottom: 1px solid rgba(200,146,42,0.09); align-items: baseline; }
+.domain-item:last-child { border-bottom: none; }
+.domain-name { font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.12em; color: var(--dark); }
+.domain-desc { font-size: 15px; font-style: italic; color: var(--meta); line-height: 1.55; }
+
+/* Stages */
+.stages-list { display: grid; gap: 4px; margin: 28px 0; }
+.stage-item { border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 20px 24px; background: #FAF8F4; }
+.stage-item.healing { border-left-color: rgba(200,146,42,0.4); }
+.stage-marker { font-family: var(--serif-sc); font-size: 10px; letter-spacing: 0.16em; color: var(--gold); display: block; margin-bottom: 4px; }
+.stage-name { font-family: var(--serif); font-size: 18px; font-weight: 600; color: var(--dark); margin-bottom: 4px; }
+.stage-question { font-size: 15px; font-style: italic; color: var(--gold); margin-bottom: 8px; }
+.stage-desc { font-size: 15px; color: var(--body); line-height: 1.65; margin: 0; }
+.stage-divider { text-align: center; padding: 8px 0; font-family: var(--serif-sc); font-size: 10px; letter-spacing: 0.2em; color: rgba(200,146,42,0.5); }
+
+/* Reading list */
+.reading-list { display: grid; gap: 2px; margin: 28px 0; }
+.reading-item { padding: 14px 0 14px 22px; position: relative; border-bottom: 1px solid rgba(200,146,42,0.09); }
+.reading-item:last-child { border-bottom: none; }
+.reading-item::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
+.reading-title { font-size: 16px; color: var(--dark); font-weight: 400; }
+.reading-author { font-size: 14px; font-style: italic; color: var(--meta); }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 52px; padding-top: 44px; border-top: 1px solid var(--gold-line); }
+.cta-link { font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.16em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.35); padding-bottom: 3px; }
+
+@media (max-width: 600px) {
+  .page { padding: 44px 20px 76px; }
+  .glossary-item { grid-template-columns: 1fr; gap: 4px; }
+  .domain-item { grid-template-columns: 1fr; gap: 4px; }
+}
+</style>
+
+<div class="page">
+
+  <span class="eyebrow">Appendix</span>
+  <h1>The Horizon<br>Language.</h1>
+  <hr class="hero-rule">
+
+  <p>The vocabulary, frameworks, and reference material behind the NextUs ecosystem. Everything here is designed to orient — to give precise language to things that often go unnamed.</p>
+
+  <div class="jump-nav">
+    <a href="#glossary">Glossary</a>
+    <a href="#nextus-domains">NextUs Domains</a>
+    <a href="#lifeos-domains">Life OS Domains</a>
+    <a href="#scale">Scale</a>
+    <a href="#stages">Stages of Healing &amp; Development</a>
+    <a href="#reading">Reading &amp; Influences</a>
+  </div>
+
+  <!-- ── GLOSSARY ── -->
+  <h2 id="glossary">Glossary of Terms</h2>
+  <p>Key terms used across the ecosystem. Plain language, precise meaning.</p>
+
+  <div class="glossary-grid">
+    <div class="glossary-item"><span class="glossary-term">Horizon Self</span><span class="glossary-def">The version of you living fully from your values, contributing what you're here to contribute — your future identity made concrete enough to navigate toward.</span></div>
+    <div class="glossary-item"><span class="glossary-term">Horizon Goals</span><span class="glossary-def">What 10/10 looks like in each of the seven Life OS domains, in your words, for your life. Not aspirations — a self-calibrated honest picture.</span></div>
+    <div class="glossary-item"><span class="glossary-term">Horizon Leap</span><span class="glossary-def">The guided crossing from insight to identity — the process of embodying your Horizon Self rather than merely understanding it.</span></div>
+    <div class="glossary-item"><span class="glossary-term">Developmental Navigation</span><span class="glossary-def">The practice of matching the right kind of attention to the right stage of development — personally and collectively.</span></div>
+    <div class="glossary-item"><span class="glossary-term">The Loop</span><span class="glossary-def">The mutually constitutive relationship between present being and future vision. Who you are shapes the future you can see; the future you can see shapes who you are being now.</span></div>
+    <div class="glossary-item"><span class="glossary-term">Orientation</span><span class="glossary-def">An honest map of where you actually are — not where you think you should be. The prerequisite for all genuine navigation.</span></div>
+    <div class="glossary-item"><span class="glossary-term">Integration</span><span class="glossary-def">The process of metabolising past experience, reconciling contradictions, and reducing internal fragmentation. Where energy stops leaking.</span></div>
+    <div class="glossary-item"><span class="glossary-term">Embodiment</span><span class="glossary-def">Living consistently as who you actually are. Identity made behavioural — not a concept but a way of showing up.</span></div>
+    <div class="glossary-item"><span class="glossary-term">T.E.A.</span><span class="glossary-def">Thoughts, Emotions, Actions — the three-lens framework for reflection used in Pulse check-ins.</span></div>
+    <div class="glossary-item"><span class="glossary-term">The Fractal Architecture</span><span class="glossary-def">The principle that the same seven domains, stages, and scales operate at both personal and civilisational level. Same physics, different scale.</span></div>
+    <div class="glossary-item"><span class="glossary-term">Structural Causation</span><span class="glossary-def">The recognition that most human behaviour emerges from structural conditions rather than individual moral failure. Don't hate the player — understand the game, then change it.</span></div>
+    <div class="glossary-item"><span class="glossary-term">Pulse</span><span class="glossary-def">The ongoing navigation practice — daily check-in, weekly reflection, quarterly reset. The rhythm that keeps your map current over time.</span></div>
+    <div class="glossary-item"><span class="glossary-term">Purpose Piece</span><span class="glossary-def">Your naturally recurring pattern of contribution — how you show up when something needs doing. Not a role, not a job title. A pattern.</span></div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- ── NEXTUS DOMAINS ── -->
+  <h2 id="nextus-domains">NextUs Domains</h2>
+  <p>The seven areas of collective life that need tending. Every meaningful challenge humanity faces lives in one or more of these domains.</p>
+
+  <div class="domain-list">
+    <div class="domain-item"><span class="domain-name">Human Being</span><span class="domain-desc">Personal development, consciousness, inner work, transformation. Who we are becoming — individually and collectively.</span></div>
+    <div class="domain-item"><span class="domain-name">Society</span><span class="domain-desc">Governance, culture, community, social structures. How we organise life together.</span></div>
+    <div class="domain-item"><span class="domain-name">Nature</span><span class="domain-desc">Environment, ecology, planetary health, regeneration. The living systems we depend on.</span></div>
+    <div class="domain-item"><span class="domain-name">Technology</span><span class="domain-desc">Tools, infrastructure, innovation. What we build to extend our reach — and its consequences.</span></div>
+    <div class="domain-item"><span class="domain-name">Finance &amp; Economy</span><span class="domain-desc">Resources, exchange, wealth, value creation and distribution. How we move what matters.</span></div>
+    <div class="domain-item"><span class="domain-name">Legacy</span><span class="domain-desc">Long-term thinking, intergenerational work, preservation. What we leave behind.</span></div>
+    <div class="domain-item"><span class="domain-name">Vision</span><span class="domain-desc">Future imagination, possibility, coordination, collective direction. Where we are going.</span></div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- ── LIFE OS DOMAINS ── -->
+  <h2 id="lifeos-domains">Life OS Domains</h2>
+  <p>The seven domains of a human life. Each one affects the others. When one falls below where it needs to be, it quietly drains the rest.</p>
+
+  <div class="domain-list">
+    <div class="domain-item"><span class="domain-name">Path</span><span class="domain-desc">Your contribution, calling, and the work you are here to do. The through-line beneath whatever you are currently doing.</span></div>
+    <div class="domain-item"><span class="domain-name">Spark</span><span class="domain-desc">The animating fire — aliveness, joy, play. When Spark is low, everything else runs on fumes.</span></div>
+    <div class="domain-item"><span class="domain-name">Body</span><span class="domain-desc">Physical vitality, health, energy, and embodiment. Your relationship with the physical instrument you inhabit.</span></div>
+    <div class="domain-item"><span class="domain-name">Finances</span><span class="domain-desc">Your relationship with resources, security, and money. The full picture of how money moves through your life.</span></div>
+    <div class="domain-item"><span class="domain-name">Relationships</span><span class="domain-desc">Intimacy, friendship, community, and belonging. The quality of connection, not just its presence.</span></div>
+    <div class="domain-item"><span class="domain-name">Inner Game</span><span class="domain-desc">Your relationship with yourself — beliefs, values, self-trust, and inner authority. The interior landscape you actually live in.</span></div>
+    <div class="domain-item"><span class="domain-name">Outer Game</span><span class="domain-desc">How you show up in the world — your skills, presence, and external expression. The translation of inner work into outward impact.</span></div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- ── SCALE ── -->
+  <h2 id="scale">Scale</h2>
+  <p>The level at which your life and contribution operates. Not a measure of ambition — a description of where your effort actually lands. Every scale is necessary. Every scale is valid. Bigger is not better. Right is better.</p>
+
+  <div class="domain-list">
+    <div class="domain-item"><span class="domain-name">Home</span><span class="domain-desc">The individual and household level. Your own life, your own body, your own four walls. Everything else builds from here.</span></div>
+    <div class="domain-item"><span class="domain-name">Neighbourhood</span><span class="domain-desc">Immediate community. Face-to-face relationships. Where change is felt personally and directly.</span></div>
+    <div class="domain-item"><span class="domain-name">City</span><span class="domain-desc">Urban and local civic scale. Community infrastructure, local governance, and shared space.</span></div>
+    <div class="domain-item"><span class="domain-name">Province / State</span><span class="domain-desc">Regional scale. Operating within geographic, political, and ecological boundaries that span multiple communities.</span></div>
+    <div class="domain-item"><span class="domain-name">Country</span><span class="domain-desc">National systems, policy, and culture. Where institutional and governmental structures operate.</span></div>
+    <div class="domain-item"><span class="domain-name">Continent</span><span class="domain-desc">Cross-border, multi-national. Shared geography and civilisational patterns that span nations.</span></div>
+    <div class="domain-item"><span class="domain-name">Global</span><span class="domain-desc">Planetary and species-level. The scale of the longest game — intergenerational, civilisational. ...for now. 🚀</span></div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- ── STAGES ── -->
+  <h2 id="stages">Stages of Healing &amp; Development</h2>
+  <p>Healing and development move in stages. Each stage has its own question and its own work. The first four are healing — they have a completion point. The last three are development — they are ongoing.</p>
+  <p>Matching the right work to the right stage is everything. The wrong kind of attention, however well-intentioned, will not land.</p>
+
+  <div class="stages-list">
+    <div class="stage-divider">— Healing —</div>
+    <div class="stage-item healing">
+      <span class="stage-marker">Stage 1</span>
+      <div class="stage-name">Safety</div>
+      <div class="stage-question">Am I allowed to exist?</div>
+      <p class="stage-desc">This is not conceptual — it is nervous-system, body-level permission to be alive. Without it, everything feels like threat, growth feels dangerous, and insight destabilises rather than liberates. The work here is regulation, containment, and stabilisation.</p>
+    </div>
+    <div class="stage-item healing">
+      <span class="stage-marker">Stage 2</span>
+      <div class="stage-name">Autonomy</div>
+      <div class="stage-question">Am I allowed to want?</div>
+      <p class="stage-desc">This is where the self starts moving again — not goals, not strategy, but desire. The work here is reclaiming the right to direct oneself, meeting shame around wanting, and learning that permission does not need to be granted by anyone else.</p>
+    </div>
+    <div class="stage-item healing">
+      <span class="stage-marker">Stage 3</span>
+      <div class="stage-name">Orientation</div>
+      <div class="stage-question">Where am I actually?</div>
+      <p class="stage-desc">Reality contact — not aspirational identity, not self-story, but truth. Honest self-assessment, mapping life domains, seeing patterns without collapse. This is the end of fantasy healing. Many people stop here because reality hurts. But this is where navigation becomes possible.</p>
+    </div>
+    <div class="stage-item healing">
+      <span class="stage-marker">Stage 4</span>
+      <div class="stage-name">Integration</div>
+      <div class="stage-question">Can I hold all of myself?</div>
+      <p class="stage-desc">Metabolising past experience, reconciling contradictions, reducing internal fragmentation. This is where energy stops leaking. Not endless excavation — completion. Healing has a finish line. This is it.</p>
+    </div>
+    <div class="stage-divider">— Development —</div>
+    <div class="stage-item">
+      <span class="stage-marker">Stage 5</span>
+      <div class="stage-name">Agency</div>
+      <div class="stage-question">Can I act from self?</div>
+      <p class="stage-desc">Now action becomes possible — not reactive effort, not proving, but true choice. Behaviour stabilises, discipline emerges naturally, self-trust begins. This is where healing becomes visible in the world.</p>
+    </div>
+    <div class="stage-item">
+      <span class="stage-marker">Stage 6</span>
+      <div class="stage-name">Embodiment</div>
+      <div class="stage-question">Can I live as who I am?</div>
+      <p class="stage-desc">Identity stops being conceptual — behaviour aligns with values, the nervous system tolerates expansion, relationships reorganise. This is the phase where people often lose old worlds. It is not comfortable. But it is real.</p>
+    </div>
+    <div class="stage-item">
+      <span class="stage-marker">Stage 7</span>
+      <div class="stage-name">Contribution</div>
+      <div class="stage-question">What is my life in service of?</div>
+      <p class="stage-desc">Meaning stabilises the psyche. Contribution integrates the self. Purpose regulates existential anxiety. This is not saviour energy — it is participation in reality. At this stage the personal and the civilisational converge.</p>
+    </div>
+  </div>
+
+  <p style="margin-top: 24px; font-style: italic; color: var(--meta); font-size: 15px;">This model draws on Erikson's stages of psychosocial development, Iron John (Robert Bly), and two decades of direct developmental work.</p>
+
+  <hr class="rule">
+
+  <!-- ── READING LIST ── -->
+  <h2 id="reading">Reading &amp; Influences</h2>
+  <p>The thinkers, books, and frameworks that have shaped the NextUs ecosystem. Not a bibliography — a map of the intellectual and philosophical ground beneath the work.</p>
+
+  <h3>Foundational</h3>
+  <div class="reading-list">
+    <div class="reading-item"><div class="reading-title">Iron John</div><div class="reading-author">Robert Bly — the mythological anatomy of masculine initiation and the retrieval of the wild self.</div></div>
+    <div class="reading-item"><div class="reading-title">Stages of psychosocial development</div><div class="reading-author">Erik Erikson — the developmental sequence that validates and informs the 7-stage model.</div></div>
+    <div class="reading-item"><div class="reading-title">Ubuntu philosophy</div><div class="reading-author">In the spirit of Nelson Mandela — I am because we are. The relational ground beneath civilisational work.</div></div>
+    <div class="reading-item"><div class="reading-title">Dymaxion / Operating Manual for Spaceship Earth</div><div class="reading-author">Buckminster Fuller — maximum output from minimum input. Doing more with less as a design principle.</div></div>
+  </div>
+
+  <h3>Development &amp; Psychology</h3>
+  <div class="reading-list">
+    <div class="reading-item"><div class="reading-title">The Body Keeps the Score</div><div class="reading-author">Bessel van der Kolk — the somatic reality of trauma and why regulation precedes everything.</div></div>
+    <div class="reading-item"><div class="reading-title">Man's Search for Meaning</div><div class="reading-author">Viktor Frankl — meaning as the deepest organising principle of a human life.</div></div>
+    <div class="reading-item"><div class="reading-title">Spiral Dynamics</div><div class="reading-author">Beck &amp; Cowan — value systems as developmental stages, applied to individuals and civilisations.</div></div>
+  </div>
+
+  <h3>Civilisational &amp; Systems</h3>
+  <div class="reading-list">
+    <div class="reading-item"><div class="reading-title">Thinking in Systems</div><div class="reading-author">Donella Meadows — the structural logic beneath collective behaviour.</div></div>
+    <div class="reading-item"><div class="reading-title">The Dawn of Everything</div><div class="reading-author">Graeber &amp; Wengrow — a radical rethinking of human history and the range of what is possible.</div></div>
+    <div class="reading-item"><div class="reading-title">Sapiens</div><div class="reading-author">Yuval Noah Harari — the long arc of the human story and the fictions that hold it together.</div></div>
+  </div>
+
+  <div class="cta-row">
+    <a href="/start" class="cta-link">Find your entry point →</a>
+    <a href="/nextus" class="cta-link">Learn about NextUs →</a>
+  </div>
+
+</div>
