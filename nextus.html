@@ -9,101 +9,133 @@ html, body { background: #FAF8F4 !important; }
   --serif: 'Cormorant Garamond', Georgia, serif;
   --serif-sc: 'Cormorant SC', Georgia, serif;
 }
-body { background: var(--bg); color: var(--body); font-family: var(--serif); font-size: 18px; line-height: 1.7; }
-.page { max-width: 820px; margin: 0 auto; padding: 72px 32px 100px; }
+.page { max-width: 820px; margin: 0 auto; padding: 72px 32px 100px; font-family: var(--serif); font-size: 18px; line-height: 1.7; color: var(--body); }
 .eyebrow { font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; display: block; margin-bottom: 14px; }
 h1 { font-family: var(--serif); font-size: clamp(40px,5.5vw,64px); font-weight: 300; color: var(--gold); line-height: 1.15; letter-spacing: -0.01em; margin-bottom: 16px; }
 h2 { font-family: var(--serif); font-size: clamp(22px,3vw,30px); font-weight: 600; color: var(--dark); line-height: 1.25; margin: 56px 0 14px; }
 p { font-size: clamp(16px,1.8vw,18px); color: var(--body); line-height: 1.75; margin-bottom: 18px; max-width: 640px; }
-.hero-rule { width: 56px; height: 1px; background: var(--gold); margin: 20px 0 40px; border: none; }
+.hero-rule { width: 56px; height: 1px; background: var(--gold); margin: 20px 0 40px; border: none; display: block; }
 .rule { border: none; border-top: 1px solid var(--gold-line); margin: 64px 0; }
 .featured { font-family: var(--serif); font-size: clamp(20px,2.6vw,26px); font-weight: 300; font-style: italic; color: var(--dark); line-height: 1.55; border-left: 3px solid var(--gold); padding: 8px 0 8px 28px; margin: 40px 0; max-width: 680px; }
-
-/* Principle blocks */
-.principles { display: grid; gap: 4px; margin: 28px 0; }
-.principle { border-left: 3px solid var(--gold); padding: 18px 0 18px 24px; }
-.principle strong { display: block; font-family: var(--serif-sc); font-size: 11px; letter-spacing: 0.14em; color: var(--gold); margin-bottom: 6px; }
-.principle p { margin: 0; font-size: 16px; color: var(--body); }
-
-/* Three functions */
-.functions { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 4px; margin: 28px 0; }
-.fn { border: 1px solid var(--gold-line); border-top: 3px solid var(--gold); padding: 24px 22px 20px; background: #FAF8F4; }
-.fn-label { font-family: var(--serif-sc); font-size: 10px; letter-spacing: 0.18em; color: var(--gold); display: block; margin-bottom: 10px; }
-.fn-title { font-size: 18px; font-weight: 600; color: var(--dark); margin-bottom: 8px; line-height: 1.3; }
-.fn-desc { font-size: 15px; color: var(--meta); font-style: italic; line-height: 1.6; }
-
-/* Fractal block */
-.fractal { background: #FAF8F4; border: 1px solid var(--gold-line); border-left: 3px solid var(--gold); padding: 48px; margin: 56px 0; }
-.fractal .eyebrow { color: var(--gold); margin-bottom: 16px; }
-.fractal h2 { color: var(--dark); margin-top: 0; font-weight: 300; font-style: italic; }
-.fractal p { color: var(--body); }
-
-/* CTA */
+.vision-list { list-style: none; padding: 0; margin: 28px 0; }
+.vision-list li { font-family: var(--serif); font-size: clamp(17px,2vw,20px); font-weight: 300; color: var(--dark); line-height: 1.65; padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid rgba(200,146,42,0.08); max-width: 680px; }
+.vision-list li:last-child { border-bottom: none; }
+.vision-list li::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
+.domains { display: grid; gap: 2px; margin: 28px 0; }
+.domain-row { display: grid; grid-template-columns: 180px 1fr; gap: 24px; padding: 14px 0; border-bottom: 1px solid rgba(200,146,42,0.09); align-items: baseline; }
+.domain-row:last-child { border-bottom: none; }
+.domain-name { font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.12em; color: var(--dark); }
+.domain-desc { font-size: 15px; font-style: italic; color: var(--meta); line-height: 1.55; }
+.invitation-block { background: var(--gold-faint); border-left: 3px solid var(--gold); padding: 40px 44px; margin: 56px 0; }
+.invitation-block p { font-family: var(--serif); font-size: clamp(18px,2.2vw,22px); font-weight: 300; color: var(--dark); line-height: 1.65; margin-bottom: 16px; max-width: 600px; }
+.invitation-block p:last-child { margin-bottom: 0; font-style: italic; color: var(--gold); }
 .cta-row { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 52px; padding-top: 44px; border-top: 1px solid var(--gold-line); align-items: center; }
 .cta-link { font-family: var(--serif-sc); font-size: 12px; letter-spacing: 0.16em; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,146,42,0.35); padding-bottom: 3px; }
-.cta-note { font-size: 15px; font-style: italic; color: var(--meta); }
+@media (max-width: 600px) { .page { padding: 44px 20px 76px; } .invitation-block { padding: 28px 24px; } .domain-row { grid-template-columns: 1fr; gap: 4px; } }
 </style>
 
 <div class="page">
 
   <span class="eyebrow">NextUs</span>
-  <h1>A navigation framework<br>for civilisation.</h1>
+  <h1>A future worth<br>building.</h1>
   <hr class="hero-rule">
 
-  <p>The world is not short on good intentions. Brilliant, committed people are building solutions to the most consequential problems humanity faces — regenerative systems, ethical technology, equitable economies, resilient communities.</p>
-  <p>They are almost entirely invisible to each other.</p>
-  <p>Progress is happening. But it is fragmented, uncoordinated, and unable to see itself clearly enough to accelerate. The farmer restoring soil carbon in Kenya doesn't know about the financing mechanism being built in Amsterdam that could fund her work. The AI ethicist in Seoul can't see the governance framework being tested in Nairobi that solves exactly her problem.</p>
+  <p>We could be constructing a world that humanity would truly be proud of.</p>
 
-  <div class="featured">What we can see clearly, we can coordinate around. What we can coordinate around, we can change.</div>
+  <ul class="vision-list">
+    <li>It could be a net positive for the environment that we're here.</li>
+    <li>Everyone could have enough of what they need to thrive.</li>
+    <li>Our technologies could extend wisdom and deepen our humanity.</li>
+    <li>Our economies could reward care, contribution, and long-term thinking.</li>
+    <li>Our cities could restore nervous systems, celebrate communities, and amplify connection.</li>
+    <li>Our institutions could earn trust by being genuinely worthy of it.</li>
+  </ul>
 
-  <p>NextUs is a perceptual layer for civilisation. Not a think tank. Not a community platform. A living map of where humanity is trying to go, who is working toward it, what is blocking progress, and where leverage exists.</p>
+  <p>We could be restoring forests, oceans, and soil at a scale that future generations took as their inheritance. We could be designing systems where health — physical, psychological, social — is the baseline condition every person is born into. We could be cultivating cultures that make meaning, belonging, and responsibility feel natural and alive. We could be aligning human ambition with the flourishing of all life.</p>
+
+  <div class="featured">This kind of future is not beyond our capability. Fragments of it already exist — in communities, in organisations, in research labs, in policy rooms, in individual lives.</div>
+
+  <p>The question is not whether it is possible. The question is whether it can be seen clearly enough to be built intentionally.</p>
 
   <hr class="rule">
 
-  <h2>Three simultaneous functions</h2>
+  <h2>The problem is not effort.</h2>
 
-  <div class="functions">
-    <div class="fn">
-      <span class="fn-label">Function One</span>
-      <div class="fn-title">Sense-Making</div>
-      <p class="fn-desc">Synthesising fragmented information into a coherent picture of where humanity stands across all seven domains — not prediction, but honest mapping of trajectory, progress, and blockers.</p>
-    </div>
-    <div class="fn">
-      <span class="fn-label">Function Two</span>
-      <div class="fn-title">Orientation</div>
-      <p class="fn-desc">Helping actors determine where their effort matters most. Reducing the cost of misallocation by making needs, gaps, and leverage points visible.</p>
-    </div>
-    <div class="fn">
-      <span class="fn-label">Function Three</span>
-      <div class="fn-title">Coordination</div>
-      <p class="fn-desc">Surfacing who is working on what, where overlap exists, where gaps persist — enabling coordination without requiring centralised control.</p>
-    </div>
+  <p>Brilliant, committed people are working on the most consequential challenges of our time — in every domain, at every scale. The intelligence is there. The commitment is there. The innovation is there.</p>
+  <p>What is missing is coordination.</p>
+  <p>The farmer restoring soil carbon in Kenya doesn't know about the financing mechanism being built in Amsterdam that could fund her work. The AI ethicist in Seoul can't see the governance framework being tested in Nairobi that solves exactly her problem. The person ready to change their life doesn't know which kind of attention will actually move it.</p>
+  <p>Effort is real. Direction is often unclear. Coordination is rare.</p>
+  <p>Meaningful change at the scale of civilisation does not come from isolated effort. It comes from shared orientation. A clear picture of what matters, who is working on it, and where the gaps remain.</p>
+
+  <hr class="rule">
+
+  <h2>What NextUs is.</h2>
+
+  <p>NextUs is, right now, a coordination layer.</p>
+  <p>A way of seeing and aligning the effort already underway. Of mapping the domains of human life, the actors within them, and the gaps that remain. Of helping direct energy, resources, and attention toward what actually moves us forward.</p>
+  <p>But the logic it operates from points somewhere larger. Toward systems that shape how policy is made. How cities are designed. How the planet is stewarded. How people find each other across the boundaries that currently keep them isolated — linking individuals to aligned organisations, movements, and each other at civilisational scale.</p>
+
+  <div class="featured">This is not a movement in the traditional sense. It is infrastructure for civilisational self-awareness — the kind that, when it exists at scale, makes a certain kind of future structurally possible that currently isn't.</div>
+
+  <p>Not driven by crisis, but by intention. Not organised around opposition, but around construction.</p>
+
+  <hr class="rule">
+
+  <h2>The seven domains.</h2>
+  <p>NextUs maps seven domains — the territories of collective human life. Every meaningful challenge humanity faces lives in one or more of these.</p>
+
+  <div class="domains">
+    <div class="domain-row"><span class="domain-name">Human Being</span><span class="domain-desc">Personal development, consciousness, inner work. Who we are becoming — individually and collectively.</span></div>
+    <div class="domain-row"><span class="domain-name">Society</span><span class="domain-desc">Governance, culture, community, social structures. How we organise life together.</span></div>
+    <div class="domain-row"><span class="domain-name">Nature</span><span class="domain-desc">Environment, ecology, planetary health, regeneration. The living systems we depend on.</span></div>
+    <div class="domain-row"><span class="domain-name">Technology</span><span class="domain-desc">Tools, infrastructure, innovation. What we build to extend our reach — and its consequences.</span></div>
+    <div class="domain-row"><span class="domain-name">Finance &amp; Economy</span><span class="domain-desc">Resources, exchange, wealth, value creation and distribution. How we move what matters.</span></div>
+    <div class="domain-row"><span class="domain-name">Legacy</span><span class="domain-desc">Long-term thinking, intergenerational work, preservation. What we leave behind.</span></div>
+    <div class="domain-row"><span class="domain-name">Vision</span><span class="domain-desc">Future imagination, possibility, collective direction. Where we are going.</span></div>
   </div>
 
   <hr class="rule">
 
-  <h2>The mechanism</h2>
-  <p>NextUs changes behaviour by changing what people can see. It doesn't enforce alignment. It doesn't mandate action. It doesn't score actors on moral purity.</p>
-  <p>It makes the system legible — progress, blockers, gaps, leverage, actors, direction — and trusts that intelligent actors operating with better information will make better decisions.</p>
-  <p>When you can see that three organisations are solving the same problem independently and a fourth has already cracked it, coordination becomes the rational choice. When you can see that a domain is critically under-resourced while an adjacent one is over-saturated, capital flows differently.</p>
-  <p>Visibility changes the cost-benefit landscape. That's the mechanism.</p>
-
-  <div class="fractal">
-    <span class="eyebrow">The fractal architecture</span>
-    <h2>The same navigation physics at two scales.</h2>
-    <p>Life OS helps individuals navigate the seven domains of their own life. NextUs applies the same framework to humanity as a whole — the same domains, the same stages of healing and development, the same orientation-before-action principle.</p>
-    <p>A person who has learned to navigate their own life clearly is more capable of contributing to civilisational navigation. This is not metaphor. It is architecture.</p>
-  </div>
+  <h2>The fractal principle.</h2>
+  <p>The same developmental physics that shape a single life also shape a civilisation.</p>
+  <p>Life OS maps the terrain of one person's life across seven domains. NextUs maps the terrain of collective life across the same architecture. The tools are different. The logic is identical.</p>
+  <p>A person who has learned to navigate their own life clearly — who knows where they are, what they are responsible for, and how they naturally contribute — is more capable of participating in the larger work. Not as a preparation for it. As an expression of it.</p>
+  <p>This is why the personal work and the civilisational work are not separate projects. They are the same orientation, at different scales.</p>
 
   <hr class="rule">
 
-  <h2>Where this begins</h2>
-  <p>NextUs is in active development. The personal navigation layer — Life OS — is the foundation from which the civilisational layer grows. If you're here early, you're part of what comes next.</p>
+  <h2>Explore the map.</h2>
+  <p>Seven domains. Four levels deep. Click any domain to explore what humanity is working on — and where the gaps remain.</p>
+
+  <div style="margin: 32px 0; border: 1px solid var(--gold-line);">
+    <iframe
+      src="https://next-us-hazel.vercel.app/"
+      width="100%"
+      height="720px"
+      style="border: none; display: block;"
+      title="NextUs Domain Explorer"
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <div class="invitation-block">
+    <p>This is being built now.</p>
+    <p>If you can see what is being pointed at — if something in you recognises the possibility — then you are already part of this.</p>
+    <p>The question is only how you want to show up.</p>
+    <p>A life worth living. A future worth building.</p>
+  </div>
+
+<hr class="rule">
+<div style="margin: 32px 0 0;">
+<p style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 300; font-style: italic; color: #7A7A72; margin-bottom: 12px;">Join us — stay up to date as we build.</p>
+<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+<form action="https://app.kit.com/forms/9215183/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9215183" data-uid="d323427d8c" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:false,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(15, 21, 35); border-color: rgb(200, 146, 42); border-radius: 4px; font-weight: 400;"></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(200, 146, 42); border-radius: 4px; font-weight: 400;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Join Us</span></button></div></div></form>
+</div>
 
   <div class="cta-row">
+    <a href="https://lifeos-olive-six.vercel.app" target="_blank" class="cta-link">Start with Orienteering →</a>
     <a href="/life-os" class="cta-link">Explore Life OS →</a>
-    <a href="/orienteering" class="cta-link">Start with Orienteering →</a>
-    <span class="cta-note">The clearest next step is an honest map of your own life.</span>
+    <a href="/work-with-nik" class="cta-link">Work directly with Nik →</a>
   </div>
 
 </div>
